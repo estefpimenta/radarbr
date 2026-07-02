@@ -1,0 +1,97 @@
+/* ==========================================
+   RADARBR DESIGN SYSTEM
+   VARIABLES
+========================================== */
+
+:root {
+  /* ========================================
+     COLORS
+  ======================================== */
+
+  /* Base */
+  --color-background: #F5F0DD;
+  --color-surface: #FFFDF2;
+
+  /* Typography */
+  --color-text-primary: #111111;
+  --color-text-secondary: #6B665C;
+
+  /* Brand */
+  --color-brand: #CDB4FF;
+
+  /* Information */
+  --color-info: #4D63FF;
+
+  /* Status */
+  --color-success: #7CE7AC;
+
+  /* INMET Alert Levels */
+  --color-warning: #FFF000;      /* Perigo Potencial */
+  --color-danger: #F96602;       /* Perigo */
+  --color-critical: #F80703;     /* Grande Perigo */
+
+  /* ========================================
+     TYPOGRAPHY
+  ======================================== */
+
+  --font-family: "Geist", sans-serif;
+
+  /* Font Sizes */
+  --fs-display: 64px;
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ========================================
+     SPACING
+  ======================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px; /* Quase tudo */
+  --radius-lg: 20px;
+  --radius-pill: 999px; /* Search bar */
+
+  /* ========================================
+     BORDER
+  ======================================== */
+
+  --border-width: 2px;
+  --border-color: var(--color-text-primary);
+
+/* ========================================
+   SHADOW
+======================================== */
+
+    --shadow-brutal: 4px 4px 0px #111111;
+
+
+
+  /* ========================================
+     LAYOUT
+  ======================================== */
+
+  --container-width: 1280px;
+  --section-spacing: 96px;
+}

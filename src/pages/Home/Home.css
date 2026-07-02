@@ -1,0 +1,31 @@
+
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    padding: 60px 100px;
+}
+
+.home__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.home__main-title {
+    color: var(--color-text-primary);
+    font-size: var(--fs-h1);
+    margin-bottom: var(--space-4);
+}
+
+.home__main-subtitle {
+    color: var(--color-text-secondary);
+    font-size: var(--fs-h3);
+}
+
+.searchBar-container {
+    width: 900px;
+    margin-top: var(--space-7);
+}

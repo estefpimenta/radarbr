@@ -1,0 +1,30 @@
+/* .navBar {
+   
+} */
+
+
+.navBar__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.navBar__logo-container {
+    background-color: var(--color-brand);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar__logo-img {
+    width: 28px;
+    object-fit: cover;
+}
+
+
+.navBar__logo-text {
+    color: var(--color-brand);
+}

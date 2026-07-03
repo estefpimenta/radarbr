@@ -16,7 +16,8 @@ function Home() {
 
             <main className="home__main">
                 <h1 className="home__main-title">Minha cidade está sob alerta?</h1>
-                <h3 className="home__main-subtitle">Consulte gratuitamente se existe algum alerta climático oficial para qualquer município brasileiro.</h3>
+                <h3 className="home__main-subtitle">Consulte gratuitamente se existe algum alerta climático oficial</h3>
+                <h3 className="home__main-subtitle">para qualquer município brasileiro.</h3>
 
                 <div className="searchBar-container">
                     <SearchBar />
@@ -33,6 +34,7 @@ function Home() {
 
         </div>
 
+      
     )
 }
 

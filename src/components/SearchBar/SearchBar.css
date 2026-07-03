@@ -10,6 +10,10 @@
     align-items: center;
 }
 
+.searchBar:hover {
+    box-shadow: var(--shadow-brutal-hover);
+}
+
 .searchBar__icon {
     margin-left: 10px;
 }

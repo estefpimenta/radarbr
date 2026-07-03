@@ -1,0 +1,17 @@
+
+.primary-button {
+    background-color: var(--color-brand);
+    color: var(--color-text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-brutal);
+    width: 160px;
+    height: 48px;
+    font-family: var(--font-family);
+    font-weight: var(--fw-semibold);
+}
+
+.primary-button:hover {
+    box-shadow: var(--shadow-brutal-hover);
+}
+

@@ -7,9 +7,12 @@ import ALertCard from '../../components/AlertCard/AlertCard'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
 
+import { useState } from 'react'
+
 function Home() {
 
-
+    const [cidade, setCidade] = useState('')
+    console.log(cidade);
     return(
         <div className="home">
 
@@ -21,7 +24,10 @@ function Home() {
                 <h3 className="home__main-subtitle">para qualquer município brasileiro.</h3>
 
                 <div className="searchBar-container">
-                    <SearchBar />
+                    <SearchBar 
+                     value={cidade}
+                     onChange={setCidade}
+                    />
                 </div>
 
                 <div className="button-container">

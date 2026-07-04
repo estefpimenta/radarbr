@@ -15,7 +15,7 @@
 }
 
 .searchBar__icon {
-    margin-left: 10px;
+    margin-left: var(--space-3);
 }
 
 .searchBar__input {

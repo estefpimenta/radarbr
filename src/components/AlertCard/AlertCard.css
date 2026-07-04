@@ -1,0 +1,59 @@
+
+
+.alert-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: var(--color-info);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-brutal);
+    padding: var(--space-4) var(--space-5);
+}
+
+.alert-card-title {
+    font-size: var(--fs-body-lg);
+    font-weight: var(--fw-bold);
+    color: var(--color-surface)
+}
+
+.alert-card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-surface);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.alert-card-description {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: var(--color-text-primary);
+}
+
+.alert-card-label {
+    font-weight: var(--fw-semibold);
+}
+
+.alert-card-content-badge {
+    display: flex;
+    flex-direction: row;
+}
+
+.badge {
+    background-color: var(--color-critical);
+    color: var(--color-surface);
+    font-size: var(--fs-small);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-pill);
+    width: 30px;
+    height: 30px;
+}
+
+.alert-card-button-container {
+    display: flex;
+    justify-content: flex-end;
+}

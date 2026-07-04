@@ -7,7 +7,9 @@
     align-items: center;
     background-color: var(--color-brand);
     color: var(--color-text-secondary);
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding: var(--space-2) 0;
 }
 

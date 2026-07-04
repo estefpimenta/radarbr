@@ -3,6 +3,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import PrimaryButton from '../../components/Button/PrimaryButton'
 import SecondaryButton from '../../components/Button/SecondaryButton'
+import ALertCard from '../../components/AlertCard/AlertCard'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
 
@@ -29,6 +30,8 @@ function Home() {
                 </div>
 
             </main>
+
+            <ALertCard />
 
             <Footer />
 

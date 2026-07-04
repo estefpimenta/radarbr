@@ -18,7 +18,9 @@ function AlertCard() {
                 </div>
             </div>
             <div className="alert-card-button-container">
-                <PrimaryButton />
+                <div className="alert-card-button-wrapper">
+                    <PrimaryButton text="Ver panorama completo →"/>
+                </div>
             </div>
         </div>
     )

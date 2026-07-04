@@ -1,11 +1,11 @@
 import './PrimaryButton.css'
 
-function PrimaryButton() {
+function PrimaryButton({text}) {
 
 
     return(
         <button className="primary-button">
-            Pesquisar
+            {text}
         </button>
     )
 }

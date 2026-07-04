@@ -25,7 +25,7 @@ function Home() {
                 </div>
 
                 <div className="button-container">
-                    <PrimaryButton />
+                    <PrimaryButton text="Pesquisar" />
                     <SecondaryButton />
                 </div>
 

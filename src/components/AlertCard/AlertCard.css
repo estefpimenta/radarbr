@@ -55,5 +55,11 @@
 
 .alert-card-button-container {
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    justify-content:flex-end;
+    
+}
+
+.alert-card-button-wrapper {
+    width: 200px;
 }

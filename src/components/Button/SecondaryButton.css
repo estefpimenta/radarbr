@@ -6,6 +6,7 @@
     color: var(--color-text-secondary);
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .secondary-button::after {

@@ -3,6 +3,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import PrimaryButton from '../../components/Button/PrimaryButton'
 import SecondaryButton from '../../components/Button/SecondaryButton'
+import Loading from '../../components/Loading/Loading'
 import ALertCard from '../../components/AlertCard/AlertCard'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
@@ -13,6 +14,7 @@ function Home() {
 
     const [cidade, setCidade] = useState('')
     const [showAlert, setShowAlert] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [alerta, setAlerta] = useState(null)
 
     const handleSearch = () => {
@@ -20,14 +22,23 @@ function Home() {
             alert('Digite o nome de uma cidade para pesquisar')
             return
         }
-        setAlerta({
+
+        setLoading(true)
+
+        setTimeout(() => {
+            
+          setAlerta({
             cidade,
             tipo: 'Chuvas intensas',
             validade: '18hrs',
             fonte: 'INMET',
             nivel: 'Grande Perigo'
         })
-        setShowAlert(true);
+
+          setLoading(false) 
+          setShowAlert(true); 
+        }, 3000)
+        
     }
 
     return(
@@ -53,6 +64,8 @@ function Home() {
                 </div>
 
             </main>
+
+            {loading && <Loading />}
 
             {showAlert && <ALertCard alerta={alerta}/>}
 

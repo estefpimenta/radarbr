@@ -13,13 +13,20 @@ function Home() {
 
     const [cidade, setCidade] = useState('')
     const [showAlert, setShowAlert] = useState(false)
+    const [alerta, setAlerta] = useState(null)
 
     const handleSearch = () => {
         if(cidade.trim() === '') {
             alert('Digite o nome de uma cidade para pesquisar')
             return
         }
-        console.log(cidade);
+        setAlerta({
+            cidade,
+            tipo: 'Chuvas intensas',
+            validade: '18hrs',
+            fonte: 'INMET',
+            nivel: 'Grande Perigo'
+        })
         setShowAlert(true);
     }
 
@@ -47,7 +54,7 @@ function Home() {
 
             </main>
 
-            {showAlert && <ALertCard cidade={cidade}/>}
+            {showAlert && <ALertCard alerta={alerta}/>}
 
             <Footer />
 

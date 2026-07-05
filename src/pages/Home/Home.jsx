@@ -61,7 +61,7 @@ function Home() {
                 </div>
 
                 <div className="button-container">
-                    <PrimaryButton text={loading ? ". . ." : "Pesquisar"} onClick={handleSearch} disabled={loading} />
+                    <PrimaryButton text={loading ? "Pesquisando..." : "Pesquisar"} onClick={handleSearch} disabled={loading} />
                     <SecondaryButton />
                 </div>
 

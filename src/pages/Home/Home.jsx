@@ -23,10 +23,11 @@ function Home() {
             return
         }
 
+        setShowAlert(false)
         setLoading(true)
 
         setTimeout(() => {
-            
+
           setAlerta({
             cidade,
             tipo: 'Chuvas intensas',
@@ -55,11 +56,12 @@ function Home() {
                     <SearchBar 
                      value={cidade}
                      onChange={setCidade}
+                     disabled={loading}
                     />
                 </div>
 
                 <div className="button-container">
-                    <PrimaryButton text="Pesquisar" onClick={handleSearch}/>
+                    <PrimaryButton text={loading ? ". . ." : "Pesquisar"} onClick={handleSearch} disabled={loading} />
                     <SecondaryButton />
                 </div>
 

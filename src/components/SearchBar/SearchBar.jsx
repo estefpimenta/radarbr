@@ -1,6 +1,6 @@
 import './SearchBar.css'
 
-function SearchBar({ value, onChange }) {
+function SearchBar({ value, onChange, disabled }) {
 
 
     return(
@@ -12,6 +12,7 @@ function SearchBar({ value, onChange }) {
                 placeholder="Digite um município brasileiro" 
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
+                disabled={disabled}
             />
         </div>
     )

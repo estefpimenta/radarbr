@@ -15,7 +15,7 @@ function Home() {
     const [showAlert, setShowAlert] = useState(false)
 
     const handleSearch = () => {
-        if(trim(cidade) === '') {
+        if(cidade.trim() === '') {
             alert('Digite o nome de uma cidade para pesquisar')
             return
         }

@@ -1,11 +1,11 @@
 import './AlertCard.css'
 import PrimaryButton from '../Button/PrimaryButton'
 
-function AlertCard() {
+function AlertCard({cidade}) {
 
     return(
         <div className="alert-card-container">
-            <p className='alert-card-title'>Cidade possui um alerta oficial ativo</p>
+                <p className='alert-card-title'>{cidade} possui um alerta oficial ativo</p>
             <div className='alert-card-content'>
                 <div className="alert-card-content-text">
                     <p className='alert-card-description'><span className='alert-card-label'>Tipo:</span> Chuvas intensas</p>

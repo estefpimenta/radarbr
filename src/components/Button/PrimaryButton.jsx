@@ -1,10 +1,10 @@
 import './PrimaryButton.css'
 
-function PrimaryButton({text}) {
+function PrimaryButton({text, onClick}) {
 
 
     return(
-        <button className="primary-button">
+        <button className="primary-button" onClick={onClick}>
             {text}
         </button>
     )

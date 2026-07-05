@@ -12,7 +12,13 @@ import { useState } from 'react'
 function Home() {
 
     const [cidade, setCidade] = useState('')
-    console.log(cidade);
+    const [showAlert, setShowAlert] = useState(false)
+
+    const handleSearch = () => {
+        console.log(cidade);
+        setShowAlert(true);
+    }
+
     return(
         <div className="home">
 
@@ -31,13 +37,13 @@ function Home() {
                 </div>
 
                 <div className="button-container">
-                    <PrimaryButton text="Pesquisar" />
+                    <PrimaryButton text="Pesquisar" onClick={handleSearch}/>
                     <SecondaryButton />
                 </div>
 
             </main>
 
-            <ALertCard />
+            {showAlert && <ALertCard cidade={cidade}/>}
 
             <Footer />
 

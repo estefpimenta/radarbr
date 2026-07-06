@@ -7,6 +7,7 @@ import Loading from '../../components/Loading/Loading'
 import ALertCard from '../../components/AlertCard/AlertCard'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
+import { buscarAlerta } from '../../services/api'
 
 import { useState } from 'react'
 
@@ -17,7 +18,7 @@ function Home() {
     const [loading, setLoading] = useState(false)
     const [alerta, setAlerta] = useState(null)
 
-    const handleSearch = () => {
+    const handleSearch = async () => {
         if(cidade.trim() === '') {
             alert('Digite o nome de uma cidade para pesquisar')
             return
@@ -26,6 +27,7 @@ function Home() {
         setShowAlert(false)
         setLoading(true)
 
+        await buscarAlerta(cidade)
         setTimeout(() => {
 
           setAlerta({
@@ -34,7 +36,7 @@ function Home() {
             validade: '18hrs',
             fonte: 'INMET',
             nivel: 'Grande Perigo'
-        })
+            })
 
           setLoading(false) 
           setShowAlert(true); 

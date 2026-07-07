@@ -27,20 +27,21 @@ function Home() {
         setShowAlert(false)
         setLoading(true)
 
-        await buscarAlerta(cidade)
-        setTimeout(() => {
+        const alertaEncontrado = await buscarAlerta(cidade)
+        console.log(alertaEncontrado)
+        if(!alertaEncontrado) {
+            setShowAlert(false)
+            setLoading(false)
+            return
+        }
 
-          setAlerta({
-            cidade,
-            tipo: 'Chuvas intensas',
-            validade: '18hrs',
-            fonte: 'INMET',
-            nivel: 'Grande Perigo'
-            })
+    
+        setAlerta(alertaEncontrado)
+        
+        setLoading(false) 
 
-          setLoading(false) 
-          setShowAlert(true); 
-        }, 3000)
+        setShowAlert(true); 
+   
         
     }
 
@@ -71,7 +72,7 @@ function Home() {
 
             {loading && <Loading />}
 
-            {showAlert && <ALertCard alerta={alerta}/>}
+            {showAlert && <ALertCard alerta={alerta} cidade={cidade} />}
 
             <Footer />
 

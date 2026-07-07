@@ -14,11 +14,13 @@ import { useState } from 'react'
 function Home() {
 
     const [cidade, setCidade] = useState('')
+    const [cidadePesquisada, setCidadePesquisada] = useState('')
     const [showAlert, setShowAlert] = useState(false)
     const [loading, setLoading] = useState(false)
     const [alerta, setAlerta] = useState(null)
 
     const handleSearch = async () => {
+
         if(cidade.trim() === '') {
             alert('Digite o nome de uma cidade para pesquisar')
             return
@@ -26,9 +28,9 @@ function Home() {
 
         setShowAlert(false)
         setLoading(true)
-
+        
         const alertaEncontrado = await buscarAlerta(cidade)
-        console.log(alertaEncontrado)
+        
         if(!alertaEncontrado) {
             setShowAlert(false)
             setLoading(false)
@@ -37,12 +39,12 @@ function Home() {
 
     
         setAlerta(alertaEncontrado)
+        setCidadePesquisada(cidade)
         
         setLoading(false) 
 
         setShowAlert(true); 
-   
-        
+    
     }
 
     return(
@@ -72,7 +74,7 @@ function Home() {
 
             {loading && <Loading />}
 
-            {showAlert && <ALertCard alerta={alerta} cidade={cidade} />}
+            {showAlert && <ALertCard alerta={alerta} cidade={cidadePesquisada} />}
 
             <Footer />
 

@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import PrimaryButton from '../../components/Button/PrimaryButton'
 import SecondaryButton from '../../components/Button/SecondaryButton'
 import Loading from '../../components/Loading/Loading'
+import Message from '../../components/Message/Message'
 import ALertCard from '../../components/AlertCard/AlertCard'
 import Footer from '../../components/Footer/Footer'
 import './Home.css'
@@ -15,35 +16,52 @@ function Home() {
 
     const [cidade, setCidade] = useState('')
     const [cidadePesquisada, setCidadePesquisada] = useState('')
+    const [message, setMessage] = useState('')
     const [showAlert, setShowAlert] = useState(false)
     const [loading, setLoading] = useState(false)
     const [alerta, setAlerta] = useState(null)
 
+    
     const handleSearch = async () => {
 
+        
+
         if(cidade.trim() === '') {
-            alert('Digite o nome de uma cidade para pesquisar')
+            setMessage('Digite o nome de uma cidade para pesquisar')
             return
         }
 
         setShowAlert(false)
+        setMessage('')
         setLoading(true)
         
-        const alertaEncontrado = await buscarAlerta(cidade)
+        try {
+
+            const alertaEncontrado = await buscarAlerta(cidade)
+
+            if (!alertaEncontrado) {
+
+                setLoading(false)
+
+                setMessage(`Nenhum alerta ativo encontrado para ${cidade}.`)
+
+                return
+            }
+
+            setAlerta(alertaEncontrado)
+            setCidadePesquisada(cidade)
         
-        if(!alertaEncontrado) {
-            setShowAlert(false)
+            setLoading(false) 
+
+            setShowAlert(true); 
+            
+        } catch (error) {
+            console.error(error)
             setLoading(false)
-            return
+            setShowAlert(false)
+            setMessage('Não foi possível consultar os dados do INMET. Tente novamente em alguns minutos')
         }
-
-    
-        setAlerta(alertaEncontrado)
-        setCidadePesquisada(cidade)
-        
-        setLoading(false) 
-
-        setShowAlert(true); 
+            
     
     }
 
@@ -64,6 +82,8 @@ function Home() {
                      disabled={loading}
                     />
                 </div>
+
+                {message && <Message text={message} />}
 
                 <div className="button-container">
                     <PrimaryButton text={loading ? "Pesquisando..." : "Pesquisar"} onClick={handleSearch} disabled={loading} />

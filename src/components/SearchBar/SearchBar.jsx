@@ -9,7 +9,7 @@ function SearchBar({ value, onChange, disabled }) {
             <input 
                 className="searchBar__input" 
                 type="text" 
-                placeholder="Digite um município brasileiro" 
+                placeholder="Digite o município e UF (ex.: Campinas - SP)" 
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 disabled={disabled}

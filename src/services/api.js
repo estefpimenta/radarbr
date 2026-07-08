@@ -5,12 +5,21 @@ export async function buscarAlerta(cidade) {
 
     const dados = await response.json()
 
-    const alertaEncontrado = dados.hoje.find(
-        aviso =>
-            aviso.municipios
-                .toLowerCase()
-                .includes(cidade.trim().toLowerCase())
-    )
+    const alertaEncontrado = dados.hoje.find(aviso => {
+
+                const municipios = aviso.municipios
+                .split(",")
+
+                const encontrouMunicipio = municipios.some(municipio =>
+                    municipio.split("(")[0].trim().toLowerCase() === cidade.trim().toLowerCase()
+                )
+                return encontrouMunicipio
+            }
+            
+        )
+        
     
     return alertaEncontrado;
+
+    
 }

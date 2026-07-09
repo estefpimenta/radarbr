@@ -1,107 +1,109 @@
-
-import NavBar from '../../components/NavBar/NavBar'
-import SearchBar from '../../components/SearchBar/SearchBar'
-import PrimaryButton from '../../components/Button/PrimaryButton'
-import SecondaryButton from '../../components/Button/SecondaryButton'
-import Loading from '../../components/Loading/Loading'
-import Message from '../../components/Message/Message'
-import ALertCard from '../../components/AlertCard/AlertCard'
-import Footer from '../../components/Footer/Footer'
-import './Home.css'
-import { buscarAlerta } from '../../services/api'
-
-import { useState } from 'react'
+import NavBar from "../../components/NavBar/NavBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import PrimaryButton from "../../components/Button/PrimaryButton";
+import SecondaryButton from "../../components/Button/SecondaryButton";
+import Loading from "../../components/Loading/Loading";
+import Message from "../../components/Message/Message";
+import ALertCard from "../../components/AlertCard/AlertCard";
+import Footer from "../../components/Footer/Footer";
+import "./Home.css";
+import { buscarAlerta } from "../../services/api";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const [cidade, setCidade] = useState("");
+  const [cidadePesquisada, setCidadePesquisada] = useState("");
+  const [message, setMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [alerta, setAlerta] = useState(null);
 
-    const [cidade, setCidade] = useState('')
-    const [cidadePesquisada, setCidadePesquisada] = useState('')
-    const [message, setMessage] = useState('')
-    const [showAlert, setShowAlert] = useState(false)
-    const [loading, setLoading] = useState(false)
-    const [alerta, setAlerta] = useState(null)
+  const navigate = useNavigate();
 
-    
-    const handleSearch = async () => {
-
-        
-
-        if(cidade.trim() === '') {
-            setMessage('Digite o nome de uma cidade para pesquisar')
-            return
-        }
-
-        setShowAlert(false)
-        setMessage('')
-        setLoading(true)
-        
-        try {
-
-            const alertaEncontrado = await buscarAlerta(cidade)
-
-            if (!alertaEncontrado) {
-
-                setLoading(false)
-
-                setMessage(`Nenhum alerta ativo encontrado para ${cidade}.`)
-
-                return
-            }
-
-            setAlerta(alertaEncontrado)
-            setCidadePesquisada(cidade)
-        
-            setLoading(false) 
-
-            setShowAlert(true); 
-            
-        } catch (error) {
-            console.error(error)
-            setLoading(false)
-            setShowAlert(false)
-            setMessage('Não foi possível consultar os dados do INMET. Tente novamente em alguns minutos')
-        }
-            
-    
+  const handleSearch = async () => {
+    if (cidade.trim() === "") {
+      setMessage("Digite o nome de uma cidade para pesquisar");
+      return;
     }
 
-    return(
-        <div className="home">
+    setShowAlert(false);
+    setMessage("");
+    setLoading(true);
 
-            <NavBar />
+    try {
+      const alertaEncontrado = await buscarAlerta(cidade);
 
-            <main className="home__main">
-                <h1 className="home__main-title">Minha cidade está sob alerta?</h1>
-                <h3 className="home__main-subtitle">Consulte gratuitamente se existe algum alerta climático oficial</h3>
-                <h3 className="home__main-subtitle">para qualquer município brasileiro.</h3>
+      if (!alertaEncontrado) {
+        setLoading(false);
 
-                <div className="searchBar-container">
-                    <SearchBar 
-                     value={cidade}
-                     onChange={setCidade}
-                     disabled={loading}
-                    />
-                </div>
+        setMessage(`Nenhum alerta ativo encontrado para ${cidade}.`);
 
-                {message && <Message text={message} />}
+        return;
+      }
 
-                <div className="button-container">
-                    <PrimaryButton text={loading ? "Pesquisando..." : "Pesquisar"} onClick={handleSearch} disabled={loading} />
-                    <SecondaryButton />
-                </div>
+      setAlerta(alertaEncontrado);
+      setCidadePesquisada(cidade);
 
-            </main>
+      setLoading(false);
 
-            {loading && <Loading />}
+      setShowAlert(true);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+      setShowAlert(false);
+      setMessage(
+        "Não foi possível consultar os dados do INMET. Tente novamente em alguns minutos",
+      );
+    }
+  };
 
-            {showAlert && <ALertCard alerta={alerta} cidade={cidadePesquisada} />}
+  const handleDashboard = () => {
+    navigate(`/dashboard/${alerta.id}`);
+  };
 
-            <Footer />
+  return (
+    <div className="home">
+      <NavBar />
 
+      <main className="home__main">
+        <h1 className="home__main-title">Minha cidade está sob alerta?</h1>
+        <h3 className="home__main-subtitle">
+          Consulte gratuitamente se existe algum alerta climático oficial
+        </h3>
+        <h3 className="home__main-subtitle">
+          para qualquer município brasileiro.
+        </h3>
+
+        <div className="searchBar-container">
+          <SearchBar value={cidade} onChange={setCidade} disabled={loading} />
         </div>
 
-      
-    )
+        {message && <Message text={message} />}
+
+        <div className="button-container">
+          <PrimaryButton
+            text={loading ? "Pesquisando..." : "Pesquisar"}
+            onClick={handleSearch}
+            disabled={loading}
+          />
+          <SecondaryButton />
+        </div>
+      </main>
+
+      {loading && <Loading />}
+
+      {showAlert && (
+        <ALertCard
+          alerta={alerta}
+          cidade={cidadePesquisada}
+          onDashboard={handleDashboard}
+        />
+      )}
+
+      <Footer />
+    </div>
+  );
 }
 
-export default Home
+export default Home;

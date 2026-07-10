@@ -6,7 +6,7 @@ export async function buscarAlerta(cidade) {
 
   const dados = await response.json();
 
-  const alertaEncontrado = dados.hoje.find((aviso) => {
+  const alertaEncontrado = dados.futuro.find((aviso) => {
     const municipios = aviso.municipios.split(",");
 
     const encontrouMunicipio = municipios.some(
@@ -21,12 +21,11 @@ export async function buscarAlerta(cidade) {
 }
 
 // Função para buscar os detalhes do alerta ativo para a cidade pesquisada anteriormente
-
 export async function buscarAlertaPorId(id) {
   const response = await fetch(
     `https://apiprevmet3.inmet.gov.br/aviso/getByID/${id}`,
   );
 
   const dados = await response.json();
-  console.log(dados);
+  return dados;
 }

@@ -51,7 +51,7 @@ function Home() {
     } catch (error) {
       console.error(error);
       setLoading(false);
-      setShowAlert(false);
+      setShowAlert(true);
       setMessage(
         "Não foi possível consultar os dados do INMET. Tente novamente em alguns minutos",
       );

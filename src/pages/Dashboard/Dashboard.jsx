@@ -5,6 +5,7 @@ import { buscarAlertaPorId } from "../../services/api";
 
 import NavBar from "../../components/NavBar/NavBar";
 import Info from "../../assets/Info.png";
+import SummaryCard from "../../components/SummaryCard/SummaryCard";
 
 function Dashboard() {
   const { id } = useParams();
@@ -41,7 +42,9 @@ function Dashboard() {
         <p className="uf">UF</p>
       </div>
 
-      <div className="cards-container"></div>
+      <div className="cards-container">
+        <SummaryCard />
+      </div>
     </div>
   );
 }

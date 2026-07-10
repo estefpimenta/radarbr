@@ -64,3 +64,11 @@
   width: 30px;
   height: 30px;
 }
+
+.cards-container {
+  max-width: 1200px;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}

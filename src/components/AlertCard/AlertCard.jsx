@@ -2,6 +2,7 @@ import "./AlertCard.css";
 import PrimaryButton from "../Button/PrimaryButton";
 
 function AlertCard({ alerta, cidade, onDashboard }) {
+  // Badge color change logic
   let alertCardBadgeClassColor = "";
 
   if (alerta.severidade === "Grande Perigo") {

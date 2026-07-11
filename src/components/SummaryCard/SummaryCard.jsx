@@ -13,7 +13,17 @@ function SummaryCard({ alerta }) {
   const dataApiFimToObject = new Date(dataApiFim);
   const dataFormatadaFim = dataApiFimToObject.toLocaleDateString("pt-BR");
 
-  console.log(alerta);
+  let badgeClassColor = "";
+
+  if (alerta.severidade === "Grande Perigo") {
+    badgeClassColor = "summary-badge-critical";
+  } else if (alerta.severidade === "Perigo") {
+    badgeClassColor = "summary-badge-danger";
+  } else if (alerta.severidade === "Perigo Potencial") {
+    badgeClassColor = "summary-badge-warning";
+  }
+
+  console.log(alerta.severidade);
 
   return (
     <div className="summary-card-container">
@@ -34,7 +44,7 @@ function SummaryCard({ alerta }) {
       </div>
 
       <div className="summary-card-badge">
-        <div className="summary-badge"></div>
+        <div className={`summary-badge ${badgeClassColor}`}></div>
         <div className="summary-badge-text">{alerta.severidade}</div>
       </div>
     </div>

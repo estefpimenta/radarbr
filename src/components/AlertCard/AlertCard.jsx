@@ -2,6 +2,16 @@ import "./AlertCard.css";
 import PrimaryButton from "../Button/PrimaryButton";
 
 function AlertCard({ alerta, cidade, onDashboard }) {
+  let alertCardBadgeClassColor = "";
+
+  if (alerta.severidade === "Grande Perigo") {
+    alertCardBadgeClassColor = "alert-card-badge-critical";
+  } else if (alerta.severidade === "Perigo") {
+    alertCardBadgeClassColor = "alert-card-badge-danger";
+  } else if (alerta.severidade === "Perigo Potencial") {
+    alertCardBadgeClassColor = "alert-card-badge-warning";
+  }
+
   return (
     <div className="alert-card-container">
       <p className="alert-card-title">
@@ -20,8 +30,8 @@ function AlertCard({ alerta, cidade, onDashboard }) {
           </p>
         </div>
         <div className="alert-card-content-badge">
-          <div className="badge"></div>
-          <div className="badge-text">{alerta.severidade}</div>
+          <div className={`alert-card-badge ${alertCardBadgeClassColor}`}></div>
+          <div className="alert-card-badge-text">{alerta.severidade}</div>
         </div>
       </div>
       <div className="alert-card-button-container">

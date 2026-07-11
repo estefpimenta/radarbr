@@ -52,7 +52,7 @@
   gap: var(--space-3);
 }
 
-.badge {
+.alert-card-badge {
   background-color: var(--color-critical);
   color: var(--color-surface);
   font-size: var(--fs-small);
@@ -60,6 +60,21 @@
   border-radius: var(--radius-pill);
   width: 30px;
   height: 30px;
+}
+
+.alert-card-badge-critical {
+  background-color: var(--color-critical);
+}
+
+.alert-card-badge-danger {
+  background-color: var(--color-danger);
+}
+
+.alert-card-badge-warning {
+  background-color: var(--color-warning);
+}
+
+.alert-card-badge-text {
 }
 
 .alert-card-button-container {

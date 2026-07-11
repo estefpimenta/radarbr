@@ -22,7 +22,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    carregarAlerta(alerta);
+    carregarAlerta();
   }, []);
 
   console.log(alerta);

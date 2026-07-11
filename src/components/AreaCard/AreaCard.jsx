@@ -12,8 +12,8 @@ function AreaCard() {
           <span className="area-card-label">Estados:</span> SP, MG
         </p>
         <p className="area-card-description">
-          <span className="area-card-label">Municípios:</span> 54 ver lista
-          completa
+          <span className="area-card-label">Municípios:</span> 54
+          <span className="area-card-city-list"> ver lista completa</span>
         </p>
       </div>
     </div>

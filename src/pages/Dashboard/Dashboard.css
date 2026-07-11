@@ -1,12 +1,11 @@
 .dashboard-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding: 60px 100px 0;
   position: relative;
   width: 100%;
-  justify-content: flex-start;
   gap: var(--space-3);
 }
 
@@ -66,9 +65,17 @@
 }
 
 .cards-container {
-  max-width: 1200px;
   width: 100%;
   background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+.other-cards-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.risk-and-area-container {
   display: flex;
   flex-direction: column;
 }

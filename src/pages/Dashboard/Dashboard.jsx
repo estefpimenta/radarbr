@@ -6,6 +6,9 @@ import { buscarAlertaPorId } from "../../services/api";
 import NavBar from "../../components/NavBar/NavBar";
 import Info from "../../assets/Info.png";
 import SummaryCard from "../../components/SummaryCard/SummaryCard";
+import RiskCard from "../../components/RiskCard/RiskCard";
+import AreaCard from "../../components/AreaCard/AreaCard";
+import InstructionsCard from "../../components/InstructionsCard/InstructionsCard";
 
 function Dashboard() {
   const { id } = useParams();
@@ -44,6 +47,14 @@ function Dashboard() {
 
       <div className="cards-container">
         <SummaryCard />
+
+        <div className="other-cards-container">
+          <div className="risk-and-area-container">
+            <RiskCard />
+            <AreaCard />
+          </div>
+          <InstructionsCard />
+        </div>
       </div>
     </div>
   );

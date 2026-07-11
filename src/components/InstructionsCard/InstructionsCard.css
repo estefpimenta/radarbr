@@ -1,0 +1,14 @@
+.instructions-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal);
+  padding: var(--space-5) var(--space-5);
+  gap: var(--space-2);
+
+  justify-content: center;
+  align-items: flex-start;
+}

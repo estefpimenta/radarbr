@@ -18,3 +18,9 @@
   font-weight: var(--fw-semibold);
   color: var(--color-text-primary);
 }
+
+.risk-card-description {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-secondary);
+}

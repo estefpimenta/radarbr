@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 60px 100px 0;
+  padding: 60px 150px 0;
   position: relative;
   width: 100%;
   gap: var(--space-3);
@@ -66,16 +66,21 @@
 
 .cards-container {
   width: 100%;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
 }
 .other-cards-container {
   display: flex;
   flex-direction: row;
+  gap: var(--space-6);
+  width: 100%;
 }
 
 .risk-and-area-container {
   display: flex;
   flex-direction: column;
+  gap: var(--space-6);
+  width: 50%;
 }

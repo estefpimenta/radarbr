@@ -14,8 +14,8 @@ function SummaryCard() {
       </div>
 
       <div className="summary-card-badge">
-        <div className="badge"></div>
-        <div className="badge-text">TEXT</div>
+        <div className="summary-badge"></div>
+        <div className="summary-badge-text">Grande Perigo</div>
       </div>
     </div>
   );

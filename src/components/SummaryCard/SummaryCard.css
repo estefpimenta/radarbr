@@ -6,7 +6,7 @@
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-brutal);
-  padding: var(--space-5) var(--space-5);
+  padding: var(--space-7) 200px;
   gap: var(--space-2);
 
   justify-content: space-between;
@@ -35,4 +35,20 @@
   flex-direction: row;
   align-items: center;
   gap: var(--space-3);
+}
+
+.summary-badge-text {
+  font-weight: var(--fw-regular);
+  color: var(--color-surface);
+  font-size: var(--fs-h2);
+}
+
+.summary-badge {
+  background-color: var(--color-critical);
+  color: var(--color-surface);
+  font-size: var(--fs-small);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  width: 90px;
+  height: 90px;
 }

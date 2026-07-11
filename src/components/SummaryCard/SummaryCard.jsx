@@ -5,10 +5,11 @@ function SummaryCard() {
     <div className="summary-card-container">
       <div className="summary-card-text">
         <p className="summary-card-description">
-          <span className="summary-card-label">Tipo:</span>
+          <span className="summary-card-label">Tipo:</span> chuvas intensas
         </p>
         <p className="summary-card-description">
-          <span className="summary-card-label">Vigência:</span>
+          <span className="summary-card-label">Vigência:</span> 01/07 / 08:00 -
+          17:00
         </p>
       </div>
 

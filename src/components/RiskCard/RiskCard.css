@@ -12,3 +12,9 @@
   justify-content: center;
   align-items: flex-start;
 }
+
+.risk-card-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+}

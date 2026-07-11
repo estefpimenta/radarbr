@@ -19,6 +19,17 @@
   gap: var(--space-1);
 }
 
+.summary-card-description {
+  font-weight: var(--fw-regular);
+  color: var(--color-surface);
+  font-size: var(--fs-h2);
+}
+
+.summary-card-label {
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+}
+
 .summary-card-badge {
   display: flex;
   flex-direction: row;

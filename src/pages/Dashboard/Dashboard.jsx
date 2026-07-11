@@ -22,7 +22,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    carregarAlerta();
+    carregarAlerta(alerta);
   }, []);
 
   console.log(alerta);
@@ -46,7 +46,7 @@ function Dashboard() {
       </div>
 
       <div className="cards-container">
-        <SummaryCard />
+        <SummaryCard alerta={alerta} />
 
         <div className="other-cards-container">
           <div className="risk-and-area-container">

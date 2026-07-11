@@ -16,7 +16,7 @@
 .summary-card-text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-3);
 }
 
 .summary-card-description {
@@ -28,6 +28,11 @@
 .summary-card-label {
   font-weight: var(--fw-semibold);
   color: var(--color-text-primary);
+}
+
+.summary-card-dates {
+  display: flex;
+  gap: var(--space-6);
 }
 
 .summary-card-badge {

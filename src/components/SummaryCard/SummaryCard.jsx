@@ -1,10 +1,6 @@
 import "./SummaryCard.css";
 
 function SummaryCard({ alerta }) {
-  if (!alerta) {
-    return null;
-  }
-
   const dataApiInicio = alerta.data_inicio;
   const dataApiInicioToObject = new Date(dataApiInicio);
   const dataFormatadaInicio = dataApiInicioToObject.toLocaleDateString("pt-BR");
@@ -22,8 +18,6 @@ function SummaryCard({ alerta }) {
   } else if (alerta.severidade === "Perigo Potencial") {
     badgeClassColor = "summary-badge-warning";
   }
-
-  console.log(alerta.severidade);
 
   return (
     <div className="summary-card-container">

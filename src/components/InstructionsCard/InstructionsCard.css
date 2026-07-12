@@ -1,7 +1,7 @@
 .instructions-card-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   background-color: var(--color-surface);
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);

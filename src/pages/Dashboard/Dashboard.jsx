@@ -26,14 +26,23 @@ function Dashboard() {
     carregarAlerta(alerta);
   }, []);
 
+  if (!alerta) {
+    return null;
+  }
+
   const cidadeUF = location.state.cidade.split(" - ");
   const cidade = cidadeUF[0];
   const UF = cidadeUF[1];
 
-  console.log(alerta);
-  console.log(location.state.cidade);
-  console.log(cidade);
-  console.log(UF);
+  console.log(alerta.estados);
+
+  // Manipulação dos dados da API
+  // dados para AreaCard
+  const estadosAPI = alerta.estados.split(",");
+  const estadosTratados = estadosAPI.join(" • ");
+
+  const regioesAPI = alerta.regioes.split(",");
+  const regioesTratadas = regioesAPI.join(" • ");
 
   return (
     <div className="dashboard-container">
@@ -59,7 +68,7 @@ function Dashboard() {
         <div className="other-cards-container">
           <div className="risk-and-area-container">
             <RiskCard />
-            <AreaCard />
+            <AreaCard estados={estadosTratados} regioes={regioesTratadas} />
           </div>
           <InstructionsCard />
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { buscarAlertaPorId } from "../../services/api";
 
 import NavBar from "../../components/NavBar/NavBar";
@@ -12,6 +12,7 @@ import InstructionsCard from "../../components/InstructionsCard/InstructionsCard
 
 function Dashboard() {
   const { id } = useParams();
+  const location = useLocation();
   const [alerta, setAlerta] = useState(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
@@ -25,7 +26,14 @@ function Dashboard() {
     carregarAlerta(alerta);
   }, []);
 
+  const cidadeUF = location.state.cidade.split(" - ");
+  const cidade = cidadeUF[0];
+  const UF = cidadeUF[1];
+
   console.log(alerta);
+  console.log(location.state.cidade);
+  console.log(cidade);
+  console.log(UF);
 
   return (
     <div className="dashboard-container">
@@ -40,9 +48,9 @@ function Dashboard() {
       </div>
 
       <div className="cidade-container">
-        <p className="cidade">Cidade</p>
+        <p className="cidade">{cidade}</p>
         <div className="circle-separator"></div>
-        <p className="uf">UF</p>
+        <p className="uf">{UF}</p>
       </div>
 
       <div className="cards-container">

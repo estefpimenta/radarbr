@@ -59,7 +59,11 @@ function Home() {
   };
 
   const handleDashboard = () => {
-    navigate(`/dashboard/${alerta.id}`);
+    navigate(`/dashboard/${alerta.id}`, {
+      state: {
+        cidade: cidadePesquisada,
+      },
+    });
   };
 
   return (

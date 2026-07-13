@@ -34,8 +34,6 @@ function Dashboard() {
   const cidade = cidadeUF[0];
   const UF = cidadeUF[1];
 
-  console.log(alerta.estados);
-
   // Manipulação dos dados da API
   // dados para AreaCard
   const estadosAPI = alerta.estados.split(",");

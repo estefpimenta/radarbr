@@ -39,7 +39,9 @@ function AreaCard({ estados, regioes, municipios }) {
         </div>
       </div>
 
-      {isModalOpen && <MunicipiosModal close={handleCloseModal} />}
+      {isModalOpen && (
+        <MunicipiosModal close={handleCloseModal} municipios={municipios} />
+      )}
     </>
   );
 }

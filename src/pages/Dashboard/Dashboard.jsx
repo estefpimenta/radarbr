@@ -30,6 +30,7 @@ function Dashboard() {
     return null;
   }
 
+  console.log(alerta);
   const cidadeUF = location.state.cidade.split(" - ");
   const cidade = cidadeUF[0];
   const UF = cidadeUF[1];
@@ -46,6 +47,11 @@ function Dashboard() {
 
   // dados para RiskCard
   const riscosAPI = alerta.riscos;
+
+  // dados para InstructionsCard
+  const instrucoesAPI = alerta.instrucoes;
+
+  console.log(instrucoesAPI);
 
   return (
     <div className="dashboard-container">
@@ -77,7 +83,7 @@ function Dashboard() {
               municipios={municipiosAPI}
             />
           </div>
-          <InstructionsCard />
+          <InstructionsCard instrucoes={instrucoesAPI} />
         </div>
       </div>
     </div>

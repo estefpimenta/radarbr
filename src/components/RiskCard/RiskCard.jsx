@@ -1,7 +1,6 @@
 import "./RiskCard.css";
 
 function RiskCard({ riscos }) {
-  console.log(riscos);
   return (
     <div className="risk-card-container">
       <p className="risk-card-title">Riscos</p>

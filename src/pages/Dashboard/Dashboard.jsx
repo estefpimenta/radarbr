@@ -51,8 +51,6 @@ function Dashboard() {
   // dados para InstructionsCard
   const instrucoesAPI = alerta.instrucoes;
 
-  console.log(instrucoesAPI);
-
   return (
     <div className="dashboard-container">
       <NavBar />

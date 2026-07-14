@@ -43,7 +43,7 @@
 
 .municipios-list-title {
   text-align: center;
-
+  color: var(--color-surface);
   font-size: var(--fs-h2);
   font-weight: var(--fw-semibold);
 
@@ -87,4 +87,20 @@
 .button-list-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.button-list {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal);
+  width: 20%;
+  height: 48px;
+  font-family: var(--font-family);
+  font-weight: var(--fw-semibold);
+}
+
+.button-list:hover {
+  box-shadow: var(--shadow-brutal-hover);
 }

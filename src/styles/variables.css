@@ -9,26 +9,26 @@
   ======================================== */
 
   /* Base */
-  --color-background: #F5F0DD;
-  --color-surface: #FFFDF2;
+  --color-background: #f5f0dd;
+  --color-surface: #fffdf2;
 
   /* Typography */
   --color-text-primary: #111111;
-  --color-text-secondary: #6B665C;
+  --color-text-secondary: #6b665c;
 
   /* Brand */
-  --color-brand: #CDB4FF;
+  --color-brand: #cdb4ff;
 
   /* Information */
-  --color-info: #4D63FF;
+  --color-info: #4d63ff;
 
   /* Status */
-  --color-success: #7CE7AC;
+  --color-success: #7ce7ac;
 
   /* INMET Alert Levels */
-  --color-warning: #FFF000;      /* Perigo Potencial */
-  --color-danger: #F96602;       /* Perigo */
-  --color-critical: #F80703;     /* Grande Perigo */
+  --color-warning: #fff000; /* Perigo Potencial */
+  --color-danger: #f96602; /* Perigo */
+  --color-critical: #f80703; /* Grande Perigo */
 
   /* ========================================
      TYPOGRAPHY
@@ -41,7 +41,7 @@
   --fs-h1: 48px;
   --fs-h2: 32px;
   --fs-h3: 24px;
-  --fs-body-lg: 18px;
+  --fs-body-lg: 20px;
   --fs-body: 16px;
   --fs-small: 14px;
 
@@ -80,14 +80,12 @@
   --border-width: 2px;
   --border-color: var(--color-text-primary);
 
-/* ========================================
+  /* ========================================
    SHADOW
 ======================================== */
 
-    --shadow-brutal: 4px 4px 0px #111111;
-    --shadow-brutal-hover: 2px 2px 0px #111111;
-
-
+  --shadow-brutal: 4px 4px 0px #111111;
+  --shadow-brutal-hover: 2px 2px 0px #111111;
 
   /* ========================================
      LAYOUT

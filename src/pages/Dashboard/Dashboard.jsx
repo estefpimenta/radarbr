@@ -57,7 +57,7 @@ function Dashboard() {
 
       <div className="title-container">
         <h1 className="title-container-text">Panorama Completo</h1>
-        <div className="title-conatiner-info">
+        <div className="title-container-info">
           <img className="info-img" src={Info} alt="info logo" />
           <p className="info-text">Dados oficiais: INMET</p>
         </div>

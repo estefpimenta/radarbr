@@ -12,7 +12,7 @@
 .title-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
   width: 100%;
   justify-content: flex-start;
   gap: var(--space-6);
@@ -24,10 +24,10 @@
   font-weight: var(--fw-bold);
 }
 
-.title-conatiner-info {
+.title-container-info {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
 }
 

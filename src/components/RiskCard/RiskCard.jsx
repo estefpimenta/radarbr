@@ -1,10 +1,11 @@
 import "./RiskCard.css";
 
-function RiskCard() {
+function RiskCard({ riscos }) {
+  console.log(riscos);
   return (
     <div className="risk-card-container">
       <p className="risk-card-title">Riscos</p>
-      <p className="risk-card-description">Alagamentos, Enchentes, etc</p>
+      <p className="risk-card-description">{riscos}</p>
     </div>
   );
 }

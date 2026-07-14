@@ -44,6 +44,9 @@ function Dashboard() {
 
   const municipiosAPI = alerta.municipios.split(",");
 
+  // dados para RiskCard
+  const riscosAPI = alerta.riscos;
+
   return (
     <div className="dashboard-container">
       <NavBar />
@@ -67,7 +70,7 @@ function Dashboard() {
 
         <div className="other-cards-container">
           <div className="risk-and-area-container">
-            <RiskCard />
+            <RiskCard riscos={riscosAPI} />
             <AreaCard
               estados={estadosTratados}
               regioes={regioesTratadas}

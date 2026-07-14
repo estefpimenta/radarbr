@@ -31,6 +31,12 @@
   color: var(--color-text-secondary);
 }
 
+.area-card-municipios {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
 .area-card-description button {
   font-size: var(--fs-small);
   font-family: var(--font-family);
@@ -43,7 +49,7 @@
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-brutal);
-  width: 50%;
+  width: 100%;
   height: 48px;
 }
 

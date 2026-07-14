@@ -26,15 +26,18 @@ function AreaCard({ estados, regioes, municipios }) {
             <span className="area-card-label">Estados:</span> {estados}
           </p>
           <p className="area-card-description">
-            <span className="area-card-label">Municípios:</span> {""}
-            {municipios.length}
-            <button
-              className="area-card-city-list-button"
-              onClick={handleModal}
-            >
-              {" "}
-              ver lista completa
-            </button>
+            <span className="area-card-label">Municípios:</span>{" "}
+            <span className="area-card-municipios">
+              {""}
+              {municipios.length}
+              <button
+                className="area-card-city-list-button"
+                onClick={handleModal}
+              >
+                {" "}
+                ver lista completa
+              </button>
+            </span>
           </p>
         </div>
       </div>

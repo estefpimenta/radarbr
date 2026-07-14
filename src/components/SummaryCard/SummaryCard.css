@@ -20,13 +20,13 @@
 }
 
 .summary-card-description {
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-semibold);
   color: var(--color-surface);
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h3);
 }
 
 .summary-card-label {
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   color: var(--color-text-primary);
 }
 
@@ -43,9 +43,9 @@
 }
 
 .summary-badge-text {
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-bold);
   color: var(--color-surface);
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h3);
 }
 
 .summary-badge {

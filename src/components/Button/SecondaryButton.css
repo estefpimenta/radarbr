@@ -1,32 +1,40 @@
-
-
 .secondary-button {
-    font-family: var(--font-family);
-    font-weight: var(--fw-semibold);
-    color: var(--color-text-secondary);
-    position: relative;
-    display: inline-block;
-    width: 100%;
+  font-family: var(--font-family);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-secondary);
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .secondary-button::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-brand);
-    transition: width 0.3s ease-in-out;
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand);
+  transition: width 0.3s ease-in-out;
 }
 
 .secondary-button:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
+.secondary-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+}
 
+.secondary-button img {
+  opacity: 0.7;
+  transition: opacity 0.1s ease;
+}
 
-.secondary-button__icon {
-    margin-left: var(--space-2);
-    width: 10px;
+.secondary-button:hover img {
+  opacity: 1;
 }

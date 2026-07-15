@@ -1,14 +1,22 @@
-import './SecondaryButton.css'
-import topRightArrow from '../../assets/top-right-arrow.png'
+import "./SecondaryButton.css";
+import MapPin from "../../assets/MapPin.png";
 
 function SecondaryButton() {
+  return (
+    <button className="secondary-button">
+      <div className="secondary-button-container">
+        <span className="secondary-button-container-text">
+          Usar minha localização
+        </span>
 
-    return(
-        <button className="secondary-button">
-            Usar minha localização
-            <img className='secondary-button__icon' src={topRightArrow} alt="Top right arrow icon" />
-        </button>
-    )
+        <img
+          className="secondary-button__icon"
+          src={MapPin}
+          alt="Map Pin Icon"
+        />
+      </div>
+    </button>
+  );
 }
 
-export default SecondaryButton
+export default SecondaryButton;

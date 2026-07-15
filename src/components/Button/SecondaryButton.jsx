@@ -1,5 +1,5 @@
 import "./SecondaryButton.css";
-import MapPin from "../../assets/MapPin.png";
+import MapPin from "../../assets/map-pin.svg";
 
 function SecondaryButton() {
   return (

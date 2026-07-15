@@ -33,6 +33,7 @@
 .secondary-button img {
   opacity: 0.7;
   transition: opacity 0.1s ease;
+  width: 20px;
 }
 
 .secondary-button:hover img {

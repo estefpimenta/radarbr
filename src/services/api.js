@@ -29,3 +29,18 @@ export async function buscarAlertaPorId(id) {
   const dados = await response.json();
   return dados;
 }
+
+// Função para buscar uma Cidade - UF via coordenadas de latitude e longitude
+export async function buscarCidadePorCoordenadas(latitude, longitude) {
+  const response = await fetch(
+    `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`,
+  );
+
+  const dados = await response.json();
+
+  const cidade = dados.address.city;
+  const uf = dados.address["ISO3166-2-lvl4"].split("-")[1];
+  const cidadeFormatada = `${cidade} - ${uf}`;
+
+  return cidadeFormatada;
+}

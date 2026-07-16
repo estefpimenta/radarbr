@@ -7,7 +7,7 @@ import Message from "../../components/Message/Message";
 import ALertCard from "../../components/AlertCard/AlertCard";
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
-import { buscarAlerta } from "../../services/api";
+import { buscarAlerta, buscarCidadePorCoordenadas } from "../../services/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -66,6 +66,26 @@ function Home() {
     });
   };
 
+  const handleLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        // console.log(position.coords.latitude);
+        // console.log(position.coords.longitude);
+
+        const cidadeGeolocalizadaFormatada = await buscarCidadePorCoordenadas(
+          latitude,
+          longitude,
+        );
+        setCidade(cidadeGeolocalizadaFormatada);
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
+  };
+
   return (
     <div className="home">
       <NavBar />
@@ -91,7 +111,7 @@ function Home() {
             onClick={handleSearch}
             disabled={loading}
           />
-          <SecondaryButton />
+          <SecondaryButton onClick={handleLocation} disabled={loading} />
         </div>
       </main>
 

@@ -1,3 +1,4 @@
+// imports
 import NavBar from "../../components/NavBar/NavBar";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import PrimaryButton from "../../components/Button/PrimaryButton";
@@ -12,12 +13,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
+  // estados em controle da home
   const [cidade, setCidade] = useState("");
   const [cidadePesquisada, setCidadePesquisada] = useState("");
   const [message, setMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [loading, setLoading] = useState(false);
   const [alerta, setAlerta] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const navigate = useNavigate();
 
@@ -104,7 +108,13 @@ function Home() {
         </h3>
 
         <div className="searchBar-container">
-          <SearchBar value={cidade} onChange={setCidade} disabled={loading} />
+          <SearchBar
+            value={cidade}
+            onChange={setCidade}
+            disabled={loading}
+            suggestions={suggestions}
+            showSuggestions={showSuggestions}
+          />
         </div>
 
         {message && <Message text={message} />}

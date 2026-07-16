@@ -20,7 +20,7 @@ export async function buscarAlerta(cidade) {
   return alertaEncontrado;
 }
 
-// Função para buscar os detalhes do alerta ativo para a cidade pesquisada anteriormente
+// Função para buscar os detalhes do alerta ativo para a cidade pesquisada anteriormente (via id)
 export async function buscarAlertaPorId(id) {
   const response = await fetch(
     `https://apiprevmet3.inmet.gov.br/aviso/getByID/${id}`,
@@ -44,3 +44,6 @@ export async function buscarCidadePorCoordenadas(latitude, longitude) {
 
   return cidadeFormatada;
 }
+
+// Função para buscar Cidade - UF da API do IBGE e abstecer nossa SuggestionList
+export async function buscarMunicipios() {}

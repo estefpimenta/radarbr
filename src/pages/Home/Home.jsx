@@ -8,8 +8,12 @@ import Message from "../../components/Message/Message";
 import ALertCard from "../../components/AlertCard/AlertCard";
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
-import { buscarAlerta, buscarCidadePorCoordenadas } from "../../services/api";
-import { useState } from "react";
+import {
+  buscarAlerta,
+  buscarCidadePorCoordenadas,
+  buscarMunicipios,
+} from "../../services/api";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -22,6 +26,7 @@ function Home() {
   const [alerta, setAlerta] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [municipios, setMunicipios] = useState([]);
 
   const navigate = useNavigate();
 
@@ -93,6 +98,31 @@ function Home() {
       },
     );
   };
+
+  useEffect(() => {
+    const carregarMunicipios = async () => {
+      const dados = await buscarMunicipios();
+
+      setMunicipios(dados);
+    };
+
+    carregarMunicipios();
+  }, []);
+
+  useEffect(() => {
+    if (cidade.length < 2) {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+
+    const resultado = municipios.filter((item) => {
+      item.toLowerCase().includes(cidade.toLowerCase());
+    });
+
+    setSuggestions(resultado);
+    setShowSuggestions(true);
+  }, [cidade, municipios]);
 
   return (
     <div className="home">

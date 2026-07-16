@@ -46,4 +46,15 @@ export async function buscarCidadePorCoordenadas(latitude, longitude) {
 }
 
 // Função para buscar Cidade - UF da API do IBGE e abstecer nossa SuggestionList
-export async function buscarMunicipios() {}
+export async function buscarMunicipios() {
+  const response = await fetch(
+    "https://servicodados.ibge.gov.br/api/v1/localidades/municipios",
+  );
+  const dados = await response.json();
+
+  const municipiosTratados = dados.map((item) => {
+    return `${item.nome} - ${item["regiao-imediata"]["regiao-intermediaria"].UF.sigla}`;
+  });
+  console.log(municipiosTratados);
+  return municipiosTratados;
+}

@@ -67,6 +67,7 @@ function Home() {
   };
 
   const handleLocation = () => {
+    setLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const latitude = position.coords.latitude;
@@ -79,9 +80,12 @@ function Home() {
           longitude,
         );
         setCidade(cidadeGeolocalizadaFormatada);
+        setLoading(false);
       },
       (error) => {
         console.log(error);
+        setLoading(false);
+        setMessage("Não foi possível obter sua localização.");
       },
     );
   };
@@ -111,7 +115,11 @@ function Home() {
             onClick={handleSearch}
             disabled={loading}
           />
-          <SecondaryButton onClick={handleLocation} disabled={loading} />
+          <SecondaryButton
+            text={loading ? "Obtendo localização" : " Usar minha localização"}
+            onClick={handleLocation}
+            disabled={loading}
+          />
         </div>
       </main>
 

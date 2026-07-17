@@ -29,8 +29,6 @@ function Home() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [municipios, setMunicipios] = useState([]);
 
-  const navigate = useNavigate();
-
   const handleSearch = async () => {
     if (cidade.trim() === "") {
       setMessage("Digite o nome de uma cidade para pesquisar");
@@ -68,8 +66,10 @@ function Home() {
     }
   };
 
+  const navigate = useNavigate();
+
   const handleDashboard = () => {
-    navigate(`/dashboard/${alerta.id}`, {
+    navigate("/", {
       state: {
         cidade: cidadePesquisada,
       },

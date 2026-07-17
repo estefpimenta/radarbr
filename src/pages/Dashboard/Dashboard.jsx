@@ -9,6 +9,7 @@ import SummaryCard from "../../components/SummaryCard/SummaryCard";
 import RiskCard from "../../components/RiskCard/RiskCard";
 import AreaCard from "../../components/AreaCard/AreaCard";
 import InstructionsCard from "../../components/InstructionsCard/InstructionsCard";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const { id } = useParams();
@@ -16,6 +17,12 @@ function Dashboard() {
   const [alerta, setAlerta] = useState(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
+
+  const navigateToHome = useNavigate();
+
+  const returnHome = () => {
+    navigateToHome("/");
+  };
 
   const carregarAlerta = async () => {
     const dados = await buscarAlertaPorId(id);
@@ -56,10 +63,17 @@ function Dashboard() {
       <NavBar />
 
       <div className="title-container">
-        <h1 className="title-container-text">Panorama Completo</h1>
-        <div className="title-container-info">
-          <img className="info-img" src={Info} alt="info logo" />
-          <p className="info-text">Dados oficiais: INMET</p>
+        <div className="title-content-left">
+          <h1 className="title-container-text">Panorama Completo</h1>
+          <div className="title-container-info">
+            <img className="info-img" src={Info} alt="info logo" />
+            <p className="info-text">Dados oficiais: INMET</p>
+          </div>
+        </div>
+        <div className="title-content-right">
+          <button onClick={returnHome} className="return-button">
+            ← Voltar a pesquisa
+          </button>
         </div>
       </div>
 

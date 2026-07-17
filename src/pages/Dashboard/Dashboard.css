@@ -12,10 +12,17 @@
 .title-container {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  justify-content: flex-start;
+}
+
+.title-content-left {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
   gap: var(--space-6);
+  width: 100%;
 }
 
 .title-container-text {
@@ -39,6 +46,22 @@
   font-weight: var(--fw-semibold);
   font-size: var(--fs-small);
   color: var(--color-text-secondary);
+}
+
+.return-button {
+  background-color: var(--color-brand);
+  color: var(--color-text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal);
+  width: 100%;
+  height: 48px;
+  font-family: var(--font-family);
+  font-weight: var(--fw-semibold);
+}
+
+.return-button:hover {
+  box-shadow: var(--shadow-brutal-hover);
 }
 
 .cidade-container {

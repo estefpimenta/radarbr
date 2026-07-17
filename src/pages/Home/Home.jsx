@@ -105,6 +105,7 @@ function Home() {
     setShowSuggestions(false);
   };
 
+  // useEffect para buscar municipios do IBGE ao renderizar a Home e guradar no estado municipos via setMunicipios
   useEffect(() => {
     const carregarMunicipios = async () => {
       const dados = await buscarMunicipios();
@@ -115,6 +116,7 @@ function Home() {
     carregarMunicipios();
   }, []);
 
+  // useEffect Executa sempre que o texto digitado / cidade ou a lista de municípios mudar, filtrando  os municípios que começam com o texto digitado / cidade, atualiza a lista e a exibe
   useEffect(() => {
     if (cidade.length < 2) {
       setSuggestions([]);
@@ -128,7 +130,6 @@ function Home() {
 
     setSuggestions(resultado);
     setShowSuggestions(resultado.length > 0);
-    console.log(resultado);
   }, [cidade, municipios]);
 
   return (

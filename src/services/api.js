@@ -55,6 +55,6 @@ export async function buscarMunicipios() {
   const municipiosTratados = dados.map((item) => {
     return `${item.nome} - ${item["regiao-imediata"]["regiao-intermediaria"].UF.sigla}`;
   });
-  console.log(municipiosTratados);
+
   return municipiosTratados;
 }

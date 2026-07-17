@@ -5,6 +5,7 @@ import PrimaryButton from "../../components/Button/PrimaryButton";
 import SecondaryButton from "../../components/Button/SecondaryButton";
 import Loading from "../../components/Loading/Loading";
 import Message from "../../components/Message/Message";
+import SuggestionsList from "../../components/SuggestionsList/SuggestionsList";
 import ALertCard from "../../components/AlertCard/AlertCard";
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
@@ -99,6 +100,11 @@ function Home() {
     );
   };
 
+  const handleSuggestion = (cidadeSelecionada) => {
+    setCidade(cidadeSelecionada);
+    setShowSuggestions(false);
+  };
+
   useEffect(() => {
     const carregarMunicipios = async () => {
       const dados = await buscarMunicipios();
@@ -117,11 +123,12 @@ function Home() {
     }
 
     const resultado = municipios.filter((item) => {
-      item.toLowerCase().includes(cidade.toLowerCase());
+      return item.toLowerCase().startsWith(cidade.toLowerCase());
     });
 
     setSuggestions(resultado);
-    setShowSuggestions(true);
+    setShowSuggestions(resultado.length > 0);
+    console.log(resultado);
   }, [cidade, municipios]);
 
   return (
@@ -145,6 +152,13 @@ function Home() {
             suggestions={suggestions}
             showSuggestions={showSuggestions}
           />
+
+          {showSuggestions && (
+            <SuggestionsList
+              suggestions={suggestions}
+              onSelect={handleSuggestion}
+            />
+          )}
         </div>
 
         {message && <Message text={message} />}

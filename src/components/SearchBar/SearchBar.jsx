@@ -1,14 +1,7 @@
 import "./SearchBar.css";
 import Search from "../../assets/search.svg";
-import SuggestionsList from "./SuggestionsList";
 
-function SearchBar({
-  value,
-  onChange,
-  disabled,
-  suggestions,
-  showSuggestions,
-}) {
+function SearchBar({ value, onChange, disabled }) {
   return (
     <div className="searchBar">
       <img className="searchBar__icon" src={Search} alt="Search icon" />
@@ -20,8 +13,6 @@ function SearchBar({
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
       />
-
-      {showSuggestions && <SuggestionsList suggestions={suggestions} />}
     </div>
   );
 }

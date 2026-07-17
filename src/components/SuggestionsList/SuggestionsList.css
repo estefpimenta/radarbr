@@ -1,0 +1,32 @@
+.suggestions-list-container {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+
+  left: 0;
+  width: 530px;
+
+  background: var(--color-surface);
+
+  border: 2px solid var(--border-color);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-brutal);
+
+  margin-top: var(--space-2);
+
+  overflow: hidden;
+}
+
+.suggestions-list li {
+  padding: 14px 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.suggestions-list li:hover {
+  background-color: var(--color-brand);
+}

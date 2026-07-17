@@ -18,6 +18,7 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
 
+  // Navegação do Dashboard de volta a Home
   const navigateToHome = useNavigate();
 
   const returnHome = () => {

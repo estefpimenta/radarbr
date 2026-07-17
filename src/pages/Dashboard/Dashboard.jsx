@@ -19,10 +19,10 @@ function Dashboard() {
   const [message, setMessage] = useState("");
 
   // Navegação do Dashboard de volta a Home
-  const navigateToHome = useNavigate();
+  const navigate = useNavigate();
 
-  const returnHome = () => {
-    navigateToHome("/");
+  const HandleReturnHome = () => {
+    navigate("/");
   };
 
   const carregarAlerta = async () => {
@@ -72,7 +72,7 @@ function Dashboard() {
           </div>
         </div>
         <div className="title-content-right">
-          <button onClick={returnHome} className="return-button">
+          <button onClick={HandleReturnHome} className="return-button">
             ← Voltar a pesquisa
           </button>
         </div>

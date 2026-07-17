@@ -69,7 +69,7 @@ function Home() {
   const navigate = useNavigate();
 
   const handleDashboard = () => {
-    navigate("/", {
+    navigate(`/dashboard/${alerta.id}`, {
       state: {
         cidade: cidadePesquisada,
       },

@@ -73,7 +73,7 @@ function Dashboard() {
         </div>
         <div className="title-content-right">
           <button onClick={HandleReturnHome} className="return-button">
-            ← Voltar a pesquisa
+            ← Voltar à pesquisa
           </button>
         </div>
       </div>

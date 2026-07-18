@@ -76,6 +76,7 @@ function Home() {
     });
   };
 
+  // Função para compartilhamento do alerta
   const handleShare = async () => {
     if (!navigator.share) {
       setMessage("Seu navegador não suporta compartilhamento.");

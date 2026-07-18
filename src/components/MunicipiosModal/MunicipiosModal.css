@@ -80,27 +80,35 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-/* ========================= */
-/* Botão                     */
-/* ========================= */
+/* Botão do modal */
 
 .button-list-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
 }
 
-.button-list {
-  background-color: var(--color-surface);
+.button-municipios-list {
+  background-color: var(--color-brand);
   color: var(--color-text-primary);
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-brutal);
-  width: 20%;
+  width: 100px;
   height: 48px;
   font-family: var(--font-family);
   font-weight: var(--fw-semibold);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.button-list:hover {
+.button-municipios-list:hover {
   box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+.button-municipios-list:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }

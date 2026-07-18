@@ -19,7 +19,7 @@ function MunicipiosModal({ close, municipios }) {
           </div>
         </div>
         <div className="button-list-container">
-          <button className="button-list" onClick={close}>
+          <button className="button-municipios-list" onClick={close}>
             Fechar
           </button>
         </div>

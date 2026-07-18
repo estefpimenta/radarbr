@@ -9,6 +9,7 @@ import SummaryCard from "../../components/SummaryCard/SummaryCard";
 import RiskCard from "../../components/RiskCard/RiskCard";
 import AreaCard from "../../components/AreaCard/AreaCard";
 import InstructionsCard from "../../components/InstructionsCard/InstructionsCard";
+import InfoInmetModal from "../../components/InfoInmetModal/InfoInmetModal";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
@@ -17,6 +18,18 @@ function Dashboard() {
   const [alerta, setAlerta] = useState(null);
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
+
+  // Abertura do modal Info INMET
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+
+  const handleInfoModal = () => {
+    setIsInfoModalOpen(true);
+  };
+
+  const handleInfoCloseModal = () => {
+    setIsInfoModalOpen(false);
+  };
+  ("");
 
   // Navegação do Dashboard de volta a Home
   const navigate = useNavigate();
@@ -66,9 +79,13 @@ function Dashboard() {
       <div className="title-container">
         <div className="title-content-left">
           <h1 className="title-container-text">Panorama Completo</h1>
-          <div className="title-container-info">
-            <img className="info-img" src={Info} alt="info logo" />
-            <p className="info-text">Dados oficiais: INMET</p>
+          <div className="info-wrapper">
+            <button className="title-container-info" onClick={handleInfoModal}>
+              <img className="info-img" src={Info} alt="info logo" />
+              <p className="info-text">Dados oficiais: INMET</p>
+            </button>
+
+            {isInfoModalOpen && <InfoInmetModal close={handleInfoCloseModal} />}
           </div>
         </div>
         <div className="title-content-right">

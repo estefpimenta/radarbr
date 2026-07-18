@@ -51,10 +51,22 @@
   box-shadow: var(--shadow-brutal);
   width: 100%;
   height: 48px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  display: flex;
+  align-items: center;
 }
 
 .area-card-description button:hover {
   box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+.area-card-description button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 .area-card-label {

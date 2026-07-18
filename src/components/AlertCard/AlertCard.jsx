@@ -13,6 +13,10 @@ function AlertCard({ alerta, cidade, onDashboard, onShare }) {
     alertCardBadgeClassColor = "alert-card-badge-warning";
   }
 
+  const dataApiFim = alerta.data_fim;
+  const dataApiFimToObject = new Date(dataApiFim);
+  const dataFormatadaFim = dataApiFimToObject.toLocaleDateString("pt-BR");
+
   return (
     <div className="alert-card-container">
       <p className="alert-card-title">
@@ -24,7 +28,8 @@ function AlertCard({ alerta, cidade, onDashboard, onShare }) {
             <span className="alert-card-label">Tipo:</span> {alerta.descricao}
           </p>
           <p className="alert-card-description">
-            <span className="alert-card-label">Válido até:</span> {alerta.fim}
+            <span className="alert-card-label">Válido até:</span>{" "}
+            {dataFormatadaFim}
           </p>
           <p className="alert-card-description">
             <span className="alert-card-label">Fonte:</span> INMET

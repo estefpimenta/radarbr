@@ -11,6 +11,7 @@
 
 .searchBar:hover {
   box-shadow: var(--shadow-brutal-hover);
+  transition: all 0.2s ease;
 }
 
 .searchBar__icon {
@@ -25,6 +26,9 @@
   background-color: transparent;
   padding: 14px 20px;
   font-family: var(--font-family);
+}
+.searchBar:focus-within {
+  border-color: var(--color-brand);
 }
 
 .searchBar__input::placeholder {

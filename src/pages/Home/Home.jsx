@@ -76,14 +76,38 @@ function Home() {
     });
   };
 
+  const handleShare = async () => {
+    if (!navigator.share) {
+      setMessage("Seu navegador não suporta compartilhamento.");
+      return;
+    }
+
+    const mensagem = `⚠ Alerta climático oficial
+    ${cidadePesquisada} possui um alerta oficial ativo.
+    • Tipo: ${alerta.descricao}
+    • Severidade: ${alerta.severidade}
+    • Válido até: ${alerta.fim}
+
+      Fonte: INMET
+
+      Consulta realizada pelo RadarBR (https://estefpimenta.github.io/radarbr/)`;
+
+    try {
+      await navigator.share({
+        title: "RadarBR - Alerta Climático",
+        text: mensagem,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleLocation = () => {
     setLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        // console.log(position.coords.latitude);
-        // console.log(position.coords.longitude);
 
         const cidadeGeolocalizadaFormatada = await buscarCidadePorCoordenadas(
           latitude,
@@ -185,6 +209,7 @@ function Home() {
           alerta={alerta}
           cidade={cidadePesquisada}
           onDashboard={handleDashboard}
+          onShare={handleShare}
         />
       )}
 

@@ -1,7 +1,7 @@
 import "./AlertCard.css";
 import PrimaryButton from "../Button/PrimaryButton";
 
-function AlertCard({ alerta, cidade, onDashboard }) {
+function AlertCard({ alerta, cidade, onDashboard, onShare }) {
   // Badge color change logic
   let alertCardBadgeClassColor = "";
 
@@ -38,6 +38,7 @@ function AlertCard({ alerta, cidade, onDashboard }) {
       <div className="alert-card-button-container">
         <div className="alert-card-button-wrapper">
           <PrimaryButton text="Ver panorama completo →" onClick={onDashboard} />
+          <PrimaryButton text="Compartilhar ⎙" onClick={onShare} />
         </div>
       </div>
     </div>

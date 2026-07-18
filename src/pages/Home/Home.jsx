@@ -90,7 +90,9 @@ function Home() {
 
       Fonte: INMET
 
-      Consulta realizada pelo RadarBR (https://estefpimenta.github.io/radarbr/)`;
+      Consulta realizada pelo RadarBR
+      
+      Consulte para mais detalhes e outros alertas em:: https://estefpimenta.github.io/radarbr/`;
 
     try {
       await navigator.share({

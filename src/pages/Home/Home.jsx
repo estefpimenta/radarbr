@@ -28,6 +28,7 @@ function Home() {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [municipios, setMunicipios] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleSearch = async () => {
     if (cidade.trim() === "") {
@@ -132,6 +133,16 @@ function Home() {
     setShowSuggestions(false);
   };
 
+  // Função para capturar tecla pressionada na navegação por seta da SearchBar
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowDown" && selectedIndex < suggestions.length - 2) {
+      setSelectedIndex(selectedIndex + 1);
+    } else if (event.key === "ArrowUp" && selectedIndex > -1) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+    console.log(selectedIndex);
+  };
+
   // useEffect para buscar municipios do IBGE ao renderizar a Home e guradar no estado municipos via setMunicipios
   useEffect(() => {
     const carregarMunicipios = async () => {
@@ -148,6 +159,7 @@ function Home() {
     if (cidade.length < 2) {
       setSuggestions([]);
       setShowSuggestions(false);
+      setSelectedIndex(-1);
       return;
     }
 
@@ -156,7 +168,9 @@ function Home() {
     });
 
     setSuggestions(resultado);
+
     setShowSuggestions(resultado.length > 0);
+    setSelectedIndex(-1);
   }, [cidade, municipios]);
 
   return (
@@ -179,12 +193,14 @@ function Home() {
             disabled={loading}
             suggestions={suggestions}
             showSuggestions={showSuggestions}
+            onKeyDown={handleKeyDown}
           />
 
           {showSuggestions && (
             <SuggestionsList
               suggestions={suggestions}
               onSelect={handleSuggestion}
+              selectedIndex={selectedIndex}
             />
           )}
         </div>

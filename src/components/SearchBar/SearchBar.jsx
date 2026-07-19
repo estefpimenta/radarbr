@@ -1,7 +1,7 @@
 import "./SearchBar.css";
 import Search from "../../assets/search.svg";
 
-function SearchBar({ value, onChange, disabled }) {
+function SearchBar({ value, onChange, disabled, onKeyDown }) {
   return (
     <div className="searchBar">
       <img className="searchBar__icon" src={Search} alt="Search icon" />
@@ -12,6 +12,7 @@ function SearchBar({ value, onChange, disabled }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
+        onKeyDown={onKeyDown}
       />
     </div>
   );

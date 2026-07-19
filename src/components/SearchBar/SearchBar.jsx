@@ -9,6 +9,8 @@ function SearchBar({ value, onChange, disabled, onKeyDown }) {
         className="searchBar__input"
         type="text"
         placeholder="Digite o município e UF (ex.: Campinas - SP)"
+        aria-label="Pesquisar município e unidade federativa"
+        autoComplete="off"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}

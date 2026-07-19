@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 500px;
-  height: 200px;
+  width: min(500px, 90vw);
+  height: auto;
 
   background-color: var(--color-info);
   border: 2px solid var(--border-color);
@@ -22,6 +22,7 @@
   font-weight: var(--fw-semibold);
   font-size: var(--fs-small);
   color: var(--color-text-primary);
+  line-height: 1.5;
 }
 
 .inmet-modal-container-link {
@@ -60,4 +61,23 @@
 .info-inmet-modal-button:active {
   transform: translate(2px, 2px);
   box-shadow: none;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .info-inmet-modal-container {
+    width: 95%;
+    padding: var(--space-5);
+  }
+
+  .info-inmet-modal-button-container {
+    justify-content: center;
+  }
+
+  .info-inmet-modal-button {
+    width: 100%;
+  }
 }

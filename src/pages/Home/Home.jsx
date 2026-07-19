@@ -183,65 +183,66 @@ function Home() {
   }, [cidade, municipios]);
 
   return (
-    <div className="home">
-      <NavBar />
+    <div className="page">
+      <div className="home">
+        <NavBar />
 
-      <main className="home__main">
-        <h1 className="home__main-title">Minha cidade está sob alerta?</h1>
-        <h3 className="home__main-subtitle">
-          Consulte gratuitamente se existe algum alerta climático oficial
-        </h3>
-        <h3 className="home__main-subtitle">
-          para qualquer município brasileiro.
-        </h3>
+        <main className="home__main">
+          <h1 className="home__main-title">Minha cidade está sob alerta?</h1>
+          <h3 className="home__main-subtitle">
+            Consulte gratuitamente se existe algum alerta climático oficial
+          </h3>
+          <h3 className="home__main-subtitle">
+            para qualquer município brasileiro.
+          </h3>
 
-        <div className="searchBar-container">
-          <SearchBar
-            value={cidade}
-            onChange={setCidade}
-            disabled={loading}
-            suggestions={suggestions}
-            showSuggestions={showSuggestions}
-            onKeyDown={handleKeyDown}
-          />
-
-          {showSuggestions && (
-            <SuggestionsList
+          <div className="searchBar-container">
+            <SearchBar
+              value={cidade}
+              onChange={setCidade}
+              disabled={loading}
               suggestions={suggestions}
-              onSelect={handleSuggestion}
-              selectedIndex={selectedIndex}
-              setSelectedIndex={setSelectedIndex}
+              showSuggestions={showSuggestions}
+              onKeyDown={handleKeyDown}
             />
-          )}
-        </div>
 
-        {message && <Message text={message} />}
+            {showSuggestions && (
+              <SuggestionsList
+                suggestions={suggestions}
+                onSelect={handleSuggestion}
+                selectedIndex={selectedIndex}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          </div>
 
-        <div className="button-container">
-          <PrimaryButton
-            text={loading ? "Pesquisando..." : "Pesquisar"}
-            onClick={handleSearch}
-            disabled={loading}
+          {message && <Message text={message} />}
+
+          <div className="button-container">
+            <PrimaryButton
+              text={loading ? "Pesquisando..." : "Pesquisar"}
+              onClick={handleSearch}
+              disabled={loading}
+            />
+            <SecondaryButton
+              text={loading ? "Obtendo localização" : " Usar minha localização"}
+              onClick={handleLocation}
+              disabled={loading}
+            />
+          </div>
+        </main>
+
+        {loading && <Loading />}
+
+        {showAlert && (
+          <ALertCard
+            alerta={alerta}
+            cidade={cidadePesquisada}
+            onDashboard={handleDashboard}
+            onShare={handleShare}
           />
-          <SecondaryButton
-            text={loading ? "Obtendo localização" : " Usar minha localização"}
-            onClick={handleLocation}
-            disabled={loading}
-          />
-        </div>
-      </main>
-
-      {loading && <Loading />}
-
-      {showAlert && (
-        <ALertCard
-          alerta={alerta}
-          cidade={cidadePesquisada}
-          onDashboard={handleDashboard}
-          onShare={handleShare}
-        />
-      )}
-
+        )}
+      </div>
       <Footer />
     </div>
   );

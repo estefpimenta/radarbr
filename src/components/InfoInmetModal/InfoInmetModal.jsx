@@ -12,7 +12,7 @@ function InfoInmetModal({ close }) {
       <a
         className="inmet-modal-container-link"
         href="https://portal.inmet.gov.br/"
-        target="blank"
+        target="_blank"
       >
         CONSULTE O PORTAL OFICIAL 🔗
       </a>

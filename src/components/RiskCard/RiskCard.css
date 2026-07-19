@@ -23,4 +23,15 @@
   font-size: var(--fs-body-lg);
   font-weight: var(--fw-semibold);
   color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .risk-card-description {
+    font-size: var(--fs-body);
+  }
 }

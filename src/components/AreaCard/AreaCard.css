@@ -77,3 +77,37 @@
   font-size: var(--fs-body);
   font-weight: var(--fw-semibold);
 }
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 1024px) {
+  .area-card-descriptions {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .area-card-descriptions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-3);
+  }
+
+  .area-card-municipios {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .area-card-description button {
+    width: 100%;
+    justify-content: center;
+  }
+}

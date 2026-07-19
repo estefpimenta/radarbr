@@ -1,7 +1,7 @@
 .instructions-card-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   background-color: var(--color-surface);
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -41,4 +41,31 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
+  line-height: 1.5;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 1024px) {
+  .instructions-card-container {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .instructions-card-list-item {
+    align-items: flex-start;
+    font-size: var(--fs-body);
+  }
+
+  .instructions-card-list-item-img {
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
 }

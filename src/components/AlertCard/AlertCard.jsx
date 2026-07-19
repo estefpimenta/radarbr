@@ -42,8 +42,8 @@ function AlertCard({ alerta, cidade, onDashboard, onShare }) {
       </div>
       <div className="alert-card-button-container">
         <div className="alert-card-button-wrapper">
-          <PrimaryButton text="Ver panorama completo →" onClick={onDashboard} />
           <PrimaryButton text="Compartilhar ⎙" onClick={onShare} />
+          <PrimaryButton text="Ver panorama completo →" onClick={onDashboard} />
         </div>
       </div>
     </div>

@@ -29,6 +29,7 @@ function Home() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [municipios, setMunicipios] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isSelectingSuggestion, setIsSelectingSuggestion] = useState(false);
 
   const handleSearch = async () => {
     if (cidade.trim() === "") {
@@ -128,19 +129,22 @@ function Home() {
     );
   };
 
+  // Função para selecionar a cidade clicada ou pressionada via enter e inserila na SearchBar
   const handleSuggestion = (cidadeSelecionada) => {
+    setIsSelectingSuggestion(true);
     setCidade(cidadeSelecionada);
     setShowSuggestions(false);
   };
 
   // Função para capturar tecla pressionada na navegação por seta da SearchBar
   const handleKeyDown = (event) => {
-    if (event.key === "ArrowDown" && selectedIndex < suggestions.length - 2) {
+    if (event.key === "ArrowDown" && selectedIndex < suggestions.length - 1) {
       setSelectedIndex(selectedIndex + 1);
     } else if (event.key === "ArrowUp" && selectedIndex > -1) {
       setSelectedIndex(selectedIndex - 1);
+    } else if (event.key === "Enter" && selectedIndex >= 0) {
+      handleSuggestion(suggestions[selectedIndex]);
     }
-    console.log(selectedIndex);
   };
 
   // useEffect para buscar municipios do IBGE ao renderizar a Home e guradar no estado municipos via setMunicipios
@@ -156,6 +160,11 @@ function Home() {
 
   // useEffect Executa sempre que o texto digitado / cidade ou a lista de municípios mudar, filtrando  os municípios que começam com o texto digitado / cidade, atualiza a lista e a exibe
   useEffect(() => {
+    if (isSelectingSuggestion) {
+      setIsSelectingSuggestion(false);
+      return;
+    }
+
     if (cidade.length < 2) {
       setSuggestions([]);
       setShowSuggestions(false);
@@ -201,6 +210,7 @@ function Home() {
               suggestions={suggestions}
               onSelect={handleSuggestion}
               selectedIndex={selectedIndex}
+              setSelectedIndex={setSelectedIndex}
             />
           )}
         </div>

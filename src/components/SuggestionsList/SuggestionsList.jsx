@@ -1,6 +1,11 @@
 import "./SuggestionsList.css";
 
-function SuggestionsList({ suggestions, onSelect, selectedIndex }) {
+function SuggestionsList({
+  suggestions,
+  onSelect,
+  selectedIndex,
+  setSelectedIndex,
+}) {
   return (
     <div className="suggestions-list-container">
       <ul className="suggestions-list">
@@ -9,6 +14,7 @@ function SuggestionsList({ suggestions, onSelect, selectedIndex }) {
             key={item}
             onClick={() => onSelect(item)}
             className={index === selectedIndex ? "selected" : ""}
+            onMouseEnter={() => setSelectedIndex(index)}
           >
             {item}
           </li>

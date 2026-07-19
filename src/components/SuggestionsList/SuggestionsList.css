@@ -19,6 +19,12 @@
   overflow: hidden;
 }
 
+.suggestions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .suggestions-list li {
   padding: 14px 18px;
 

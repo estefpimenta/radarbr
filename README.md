@@ -322,3 +322,5 @@ https://estefpimenta.github.io/radarbr/
 ## 📁 Repositório
 
 https://github.com/estefpimenta/radarbr
+
+> Pull Request criado para simulação do processo de revisão.

@@ -4,7 +4,7 @@
 
 # 📡 RadarBR
 
-> **Case Study | UX Research • Product Design • Front-End Engineering**
+> **Case Study | Front-End Engineering • UX/UI**
 
 RadarBR é uma aplicação web desenvolvida para facilitar o acesso da população a alertas climáticos oficiais emitidos pelo Instituto Nacional de Meteorologia (INMET).
 

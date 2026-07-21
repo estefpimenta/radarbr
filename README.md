@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./src/assets/banner-radarbr.png" alt="Banner RadarBR">
+    <img src="./src/assets/BannerGitHub.png" alt="Banner RadarBR">
 </p>
 
 # 📡 RadarBR

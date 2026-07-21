@@ -22,19 +22,13 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
 
 ---
 
-# 📖 Contexto
+# 🎯 Problema e contexto
 
-O RadarBR nasceu da observação de um problema real.
+<p align="center">
+    <img src="./src/assets/Research.png" alt="Noticias">
+</p>
 
-Embora o Brasil possua instituições responsáveis pelo monitoramento climático, como **INMET**, **INPE**, **CEMADEN** e as Defesas Civis, o acesso rápido às informações ainda ocorre por meio de diferentes portais institucionais, dificultando consultas durante situações de risco.
-
-Ao invés de desenvolver apenas mais um consumidor de APIs, este projeto buscou investigar como princípios de **UX Design** podem tornar essas informações mais acessíveis e compreensíveis para qualquer cidadão.
-
----
-
-# 🎯 O Problema
-
-Eventos climáticos extremos têm se tornado cada vez mais frequentes no Brasil.
+Eventos climáticos extremos têm se tornado cada vez mais frequentes no mundo e e no Brasil.
 
 Durante períodos de chuvas intensas, ondas de calor e fenômenos como o **Super El Niño**, torna-se fundamental que a população consiga descobrir rapidamente se sua cidade está sob alerta.
 
@@ -46,6 +40,24 @@ Entretanto, atualmente existem desafios como:
 - pouca integração entre dados e experiência do usuário.
 
 Esses desafios motivaram o desenvolvimento do RadarBR.
+
+O RadarBR nasceu da observação de um problema real.
+
+Embora o Brasil possua instituições responsáveis pelo monitoramento climático, como **INMET**, **INPE**, **CEMADEN** e as Defesas Civis, o acesso rápido às informações ainda ocorre por meio de diferentes portais institucionais, dificultando consultas durante situações de risco.
+
+Ao invés de desenvolver apenas mais um consumidor de APIs, este projeto buscou investigar como princípios de **UX Design** podem tornar essas informações mais acessíveis e compreensíveis para qualquer cidadão.
+
+O projeto foi inspirado pelo aumento da frequência dos eventos climáticos extremos associados ao fenômeno **El Niño**, bem como pelas dificuldades brasileiras relacionadas à prevenção e comunicação desses riscos.
+
+#### Referências
+
+https://www.jota.info/coberturas-especiais/matriz/super-el-nino-iminente-expoe-despreparo-do-brasil-para-lidar-com-calor-extremo
+
+https://jornal.unesp.br/2026/05/26/perspectiva-de-el-nino-intenso-entre-2026-e-2027-chegou-as-manchetes-o-brasil-esta-preparado/
+
+https://www.nexojornal.com.br/externo/2025/02/07/alertas-de-chuvas-da-defesa-civil
+
+https://www.terra.com.br/vida-e-estilo/super-el-nino-ja-chegou-ao-brasil-veja-como-o-fenomeno-vai-afetar-o-clima,df29dcdeb383f3162b47629f487114a1we2lwe9q.html#google_vignette
 
 ---
 
@@ -86,13 +98,6 @@ Antes da implementação foi realizado um processo de pesquisa para compreender:
 - contexto dos eventos climáticos extremos no Brasil;
 - desafios da comunicação de riscos;
 - boas práticas de UX para aplicações informativas.
-
-O projeto foi inspirado pelo aumento da frequência dos eventos climáticos extremos associados ao fenômeno **El Niño**, bem como pelas dificuldades brasileiras relacionadas à prevenção e comunicação desses riscos.
-
-### Referências
-
-- JOTA — Super El Niño expõe despreparo do Brasil para lidar com calor extremo.
-- Jornal da UNESP — Perspectiva de El Niño intenso entre 2026 e 2027.
 
 ---
 
@@ -320,7 +325,3 @@ https://estefpimenta.github.io/radarbr/
 ## 📁 Repositório
 
 https://github.com/estefpimenta/radarbr
-
-"Pull Request criado para simulação do processo de revisão."
-"teste"
-"teste

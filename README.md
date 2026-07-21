@@ -12,7 +12,7 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
 
 ---
 
-# 🎯 Problema e contexto
+## 🎯 Problema e contexto
 
 <p align="center">
     <img src="./src/assets/Research.png" alt="Noticias">
@@ -51,7 +51,7 @@ O projeto foi inspirado pelo aumento da frequência dos eventos climáticos extr
 
 ---
 
-# 💡 A Solução
+## 💡 A Solução
 
 ### Demonstração do fluxo completo da aplicação
 
@@ -63,7 +63,7 @@ O RadarBR propõe uma experiência centrada no usuário para consulta de alertas
 
 Em vez de exigir que o usuário navegue por diferentes páginas institucionais, a aplicação reúne as informações essenciais em uma única interface, organizada em dois momentos.
 
-### Consulta rápida
+#### Consulta rápida
 
 A Home permite verificar rapidamente se existe algum alerta oficial ativo para qualquer município brasileiro.
 
@@ -71,7 +71,7 @@ O foco é responder imediatamente à pergunta:
 
 > **"Minha cidade está sob alerta?"**
 
-### Exploração dos detalhes
+#### Exploração dos detalhes
 
 Caso exista um alerta, o Dashboard apresenta informações complementares como:
 
@@ -86,20 +86,14 @@ Essa organização segue o princípio de **Progressive Disclosure**, revelando d
 
 ---
 
-# 🔍 Pesquisa
+## 🎨 Processo de Design
 
-Antes da implementação foi realizado um processo de pesquisa para compreender:
+O RadarBR foi desenvolvido seguindo um fluxo completo de design antes da implementação. Antes da implementação foi realizado um processo de pesquisa para compreender:
 
 - funcionamento dos alertas oficiais do INMET;
 - contexto dos eventos climáticos extremos no Brasil;
 - desafios da comunicação de riscos;
 - boas práticas de UX para aplicações informativas.
-
----
-
-# 🎨 Processo de Design
-
-O RadarBR foi desenvolvido seguindo um fluxo completo de design antes da implementação.
 
 ```text
 Pesquisa
@@ -123,17 +117,17 @@ Responsividade
 Deploy
 ```
 
-## Wireframes
+### Wireframes
 
 Após os wireframes foi criado um protótipo de alta fidelidade no Figma para validar a experiência antes da implementação.
 
-### Home
+#### Home
 
 <p align="center">
     <img src="./src/assets/HomeWireframesPreview.png" width="900">
 </p>
 
-### Dashboard
+#### Dashboard
 
 <p align="center">
     <img src="./src/assets/DashboardWireframesPreview.png" width="900">
@@ -141,7 +135,7 @@ Após os wireframes foi criado um protótipo de alta fidelidade no Figma para va
 
 ---
 
-## Design System
+### Design System
 
 Foi desenvolvido um Design System próprio para garantir consistência visual durante toda a implementação.
 
@@ -161,9 +155,9 @@ Incluindo:
 
 ---
 
-# ✨ Funcionalidades
+## ✨ Funcionalidades
 
-## Consulta de alertas
+### Consulta de alertas
 
 - Pesquisa por município brasileiro;
 - Integração com dados oficiais do INMET;
@@ -171,7 +165,7 @@ Incluindo:
 
 ---
 
-## Dashboard
+### Dashboard
 
 Visualização detalhada contendo:
 
@@ -184,7 +178,7 @@ Visualização detalhada contendo:
 
 ---
 
-## Compartilhamento
+### Compartilhamento
 
 Utilização da Web Share API para compartilhar rapidamente alertas climáticos.
 
@@ -194,7 +188,7 @@ Utilização da Web Share API para compartilhar rapidamente alertas climáticos.
 
 ---
 
-# 🎯 Decisões de UX
+## 🎯 Decisões de UX
 
 Durante o desenvolvimento foram aplicados diversos princípios de UX.
 
@@ -236,23 +230,23 @@ Interface adaptada para:
 
 ---
 
-# 🛠️ Tecnologias
+## 🛠️ Tecnologias
 
-## Front-End
+### Front-End
 
 - React.js
 - Vite
 - JavaScript (ES6+)
 - CSS3
 
-## APIs
+### APIs
 
 - INMET
 - IBGE
 - Geolocation API
 - Web Share API
 
-## Ferramentas
+### Ferramentas
 
 - Figma
 - Git
@@ -261,7 +255,7 @@ Interface adaptada para:
 
 ---
 
-# 📂 Arquitetura
+## 📂 Arquitetura
 
 ```text
 src
@@ -278,7 +272,7 @@ src
 
 ---
 
-# 🚀 Próximos Passos
+## 🚀 Próximos Passos
 
 - Histórico de pesquisas;
 - Favoritar municípios;
@@ -291,7 +285,7 @@ src
 
 ---
 
-# 📚 Reflexões do Projeto
+## 📚 Reflexões do Projeto
 
 O RadarBR foi desenvolvido como um projeto completo, envolvendo todas as etapas da construção de um produto digital.
 
@@ -312,12 +306,12 @@ Mais do que desenvolver uma aplicação funcional, este projeto reforçou a impo
 
 ---
 
-# 🔗 Links
+## 🔗 Links
 
-## 💻 Aplicação
+### 💻 Aplicação
 
 https://estefpimenta.github.io/radarbr/
 
-## 📁 Repositório
+### 📁 Repositório
 
 https://github.com/estefpimenta/radarbr

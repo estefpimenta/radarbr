@@ -183,7 +183,7 @@ function Home() {
   }, [cidade, municipios]);
 
   return (
-    <div className="page">
+    <div className="layout-page">
       <div className="home">
         <NavBar />
 

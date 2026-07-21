@@ -124,10 +124,18 @@ Deploy
 
 ## Wireframes
 
-> Inserir imagem dos wireframes.
+Após os wireframes foi criado um protótipo de alta fidelidade no Figma para validar a experiência antes da implementação.
+
+### Home
 
 <p align="center">
-    <img src="./src/assets/wireframes.png" width="900">
+    <img src="./src/assets/HomeWireframesPreview.png" width="900">
+</p>
+
+### Dashboard
+
+<p align="center">
+    <img src="./src/assets/DashboardWireframesPreview.png" width="900">
 </p>
 
 ---
@@ -147,17 +155,7 @@ Incluindo:
 - Sistema de Badges
 
 <p align="center">
-    <img src="./src/assets/design-system.png" width="900">
-</p>
-
----
-
-## Protótipo
-
-Após os wireframes foi criado um protótipo de alta fidelidade no Figma para validar a experiência antes da implementação.
-
-<p align="center">
-    <img src="./src/assets/figma-prototype.png" width="900">
+    <img src="./src/assets/DesignSystemPreview.png/" width="900">
 </p>
 
 ---

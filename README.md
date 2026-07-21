@@ -12,16 +12,6 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
 
 ---
 
-# 📸 Demonstração
-
-### Fluxo completo da aplicação
-
-<p align="center">
-    <img src="./src/assets/gifPreview.gif" alt="Fluxo da aplicação">
-</p>
-
----
-
 # 🎯 Problema e contexto
 
 <p align="center">
@@ -51,17 +41,23 @@ O projeto foi inspirado pelo aumento da frequência dos eventos climáticos extr
 
 #### Referências
 
-https://www.jota.info/coberturas-especiais/matriz/super-el-nino-iminente-expoe-despreparo-do-brasil-para-lidar-com-calor-extremo
+-- https://www.jota.info/coberturas-especiais/matriz/super-el-nino-iminente-expoe-despreparo-do-brasil-para-lidar-com-calor-extremo
 
-https://jornal.unesp.br/2026/05/26/perspectiva-de-el-nino-intenso-entre-2026-e-2027-chegou-as-manchetes-o-brasil-esta-preparado/
+-- https://jornal.unesp.br/2026/05/26/perspectiva-de-el-nino-intenso-entre-2026-e-2027-chegou-as-manchetes-o-brasil-esta-preparado/
 
-https://www.nexojornal.com.br/externo/2025/02/07/alertas-de-chuvas-da-defesa-civil
+-- https://www.nexojornal.com.br/externo/2025/02/07/alertas-de-chuvas-da-defesa-civil
 
-https://www.terra.com.br/vida-e-estilo/super-el-nino-ja-chegou-ao-brasil-veja-como-o-fenomeno-vai-afetar-o-clima,df29dcdeb383f3162b47629f487114a1we2lwe9q.html#google_vignette
+-- https://www.terra.com.br/vida-e-estilo/super-el-nino-ja-chegou-ao-brasil-veja-como-o-fenomeno-vai-afetar-o-clima,df29dcdeb383f3162b47629f487114a1we2lwe9q.html#google_vignette
 
 ---
 
 # 💡 A Solução
+
+### Demonstração do fluxo completo da aplicação
+
+<p align="center">
+    <img src="./src/assets/gifPreview.gif" alt="Fluxo da aplicação">
+</p>
 
 O RadarBR propõe uma experiência centrada no usuário para consulta de alertas climáticos oficiais.
 

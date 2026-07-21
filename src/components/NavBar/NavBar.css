@@ -30,6 +30,10 @@
   color: var(--color-brand);
 }
 
+.navBar__logo-text-Radar {
+  color: var(--color-text-primary);
+}
+
 /* ===========================
    MOBILE
 =========================== */

@@ -17,7 +17,7 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
 ### Fluxo completo da aplicação
 
 <p align="center">
-    <img src="./src/assets/demo-home-dashboard.gif" alt="Fluxo da aplicação">
+    <img src="./src/assets/gifPreview.gif" alt="Fluxo da aplicação">
 </p>
 
 ---

@@ -81,7 +81,7 @@ Essa organização segue o princípio de **Progressive Disclosure**, revelando d
 
 ## 🎨 Processo de Design
 
-O RadarBR foi desenvolvido seguindo um fluxo completo de design antes da implementação. Antes da implementação foi realizado um processo de pesquisa para compreender:
+O RadarBR foi desenvolvido seguindo um fluxo completo de design antes da implementação por meio de pesqiosas para compreender:
 
 - funcionamento dos alertas oficiais do INMET;
 - contexto dos eventos climáticos extremos no Brasil;

@@ -18,30 +18,23 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
     <img src="./src/assets/Research.png" alt="Noticias">
 </p>
 
-Eventos climáticos extremos têm se tornado cada vez mais frequentes no mundo e e no Brasil.
+Eventos climáticos extremos têm se tornado cada vez mais frequentes no mundo e no Brasil. E para o segundo semestre de 2026, as probabilidades da ocoreencia do fenom,eno do  El Niño são altas. De acordo com projeções recentes do Centro Nacional de Monitoramento e Alertas de Desastres Naturais (CEMADEN), o fenômeno pode intensificar as secas e incêndios florestais no Norte e Nordeste do Brasil, aumentar a frequência de ondas de calor nas regiões centrais e desencadear chuvas extremas no Sul (1).
 
-Durante períodos de chuvas intensas, ondas de calor e fenômenos como o **Super El Niño**, torna-se fundamental que a população consiga descobrir rapidamente se sua cidade está sob alerta.
-
-Entretanto, atualmente existem desafios como:
+Sendo assim, durante esse período torna-se fundamental que a população consiga descobrir rapidamente se sua cidade está sob alerta. Entretanto, atualmente existem desafios como:
 
 - dificuldade em localizar rapidamente alertas oficiais;
-- informações distribuídas em diferentes plataformas;
+- informações distribuídas em diferentes plataformaso, como **INMET**, **INPE**, **CEMADEN** ;
 - comunicação excessivamente técnica;
 - pouca integração entre dados e experiência do usuário.
 
 Esses desafios motivaram o desenvolvimento do RadarBR.
 
-O RadarBR nasceu da observação de um problema real.
+Dessa forma, este projeto foi inspirado pelo aumento da frequência dos eventos climáticos extremos associados ao fenômeno El Niño, bem como pelas dificuldades brasileiras relacionadas à prevenção e comunicação desses riscos e buscou investigar como princípios de UX Design podem tornar essas informações mais acessíveis e compreensíveis para qualquer cidadão.
 
-Embora o Brasil possua instituições responsáveis pelo monitoramento climático, como **INMET**, **INPE**, **CEMADEN** e as Defesas Civis, o acesso rápido às informações ainda ocorre por meio de diferentes portais institucionais, dificultando consultas durante situações de risco.
-
-Ao invés de desenvolver apenas mais um consumidor de APIs, este projeto buscou investigar como princípios de **UX Design** podem tornar essas informações mais acessíveis e compreensíveis para qualquer cidadão.
-
-O projeto foi inspirado pelo aumento da frequência dos eventos climáticos extremos associados ao fenômeno **El Niño**, bem como pelas dificuldades brasileiras relacionadas à prevenção e comunicação desses riscos.
 
 #### Referências
 
-- https://www.jota.info/coberturas-especiais/matriz/super-el-nino-iminente-expoe-despreparo-do-brasil-para-lidar-com-calor-extremo
+- https://www.jota.info/coberturas-especiais/matriz/super-el-nino-iminente-expoe-despreparo-do-brasil-para-lidar-com-calor-extremo (1)
 
 - https://jornal.unesp.br/2026/05/26/perspectiva-de-el-nino-intenso-entre-2026-e-2027-chegou-as-manchetes-o-brasil-esta-preparado/
 

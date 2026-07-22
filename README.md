@@ -18,7 +18,7 @@ O projeto foi concebido como um estudo completo de **pesquisa**, **UX**, **desig
     <img src="./src/assets/Research.png" alt="Noticias">
 </p>
 
-Eventos climáticos extremos têm se tornado cada vez mais frequentes no mundo e no Brasil. E para o segundo semestre de 2026, as probabilidades da ocoreencia do fenom,eno do  El Niño são altas. De acordo com projeções recentes do Centro Nacional de Monitoramento e Alertas de Desastres Naturais (CEMADEN), o fenômeno pode intensificar as secas e incêndios florestais no Norte e Nordeste do Brasil, aumentar a frequência de ondas de calor nas regiões centrais e desencadear chuvas extremas no Sul (1).
+Eventos climáticos extremos têm se tornado cada vez mais frequentes no mundo e no Brasil. Para o segundo semestre de 2026, as probabilidades da ocorrência do fenomêno do  El Niño são altas. De acordo com projeções recentes do Centro Nacional de Monitoramento e Alertas de Desastres Naturais (CEMADEN), o fenômeno pode intensificar as secas e incêndios florestais no Norte e Nordeste do Brasil, aumentar a frequência de ondas de calor nas regiões centrais e desencadear chuvas extremas no Sul (1).
 
 Sendo assim, durante esse período torna-se fundamental que a população consiga descobrir rapidamente se sua cidade está sob alerta. Entretanto, atualmente existem desafios como:
 

@@ -64,9 +64,14 @@ O foco é responder imediatamente à pergunta:
 
 > **"Minha cidade está sob alerta?"**
 
+
+#### Compartilhamento
+
+Caso exista um alerta, na Home existe funcionalidade de compartilhar o alerta encontrado.
+
 #### Exploração dos detalhes
 
-Caso exista um alerta, o Dashboard apresenta informações complementares como:
+Caso o usuario deseje, o Dashboard apresenta informações complementares como:
 
 - severidade;
 - período de validade;
@@ -274,26 +279,6 @@ src
 
 ---
 
-## 📚 Reflexões do Projeto
-
-O RadarBR foi desenvolvido como um projeto completo, envolvendo todas as etapas da construção de um produto digital.
-
-Ao longo do desenvolvimento foram consolidados conhecimentos em:
-
-- UX Research;
-- Wireframing;
-- Design System;
-- Prototipação no Figma;
-- Arquitetura de Componentes em React;
-- Consumo de APIs REST;
-- Gerenciamento de Estado;
-- Responsividade;
-- Acessibilidade;
-- Integração entre pesquisa, design e implementação.
-
-Mais do que desenvolver uma aplicação funcional, este projeto reforçou a importância de compreender o problema antes da implementação, utilizando pesquisa, design e validação da experiência do usuário como parte do processo de desenvolvimento.
-
----
 
 ## 🔗 Links
 

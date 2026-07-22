@@ -267,13 +267,9 @@ src
 
 ## 🚀 Próximos Passos
 
-- Histórico de pesquisas;
-- Favoritar municípios;
+- Login: Histórico de pesquisas; Favoritar municípios;
 - Notificações em tempo real;
-- Integração com Defesa Civil;
 - Mapa interativo;
-- Progressive Web App (PWA);
-- Internacionalização;
 - Testes automatizados.
 
 ---
